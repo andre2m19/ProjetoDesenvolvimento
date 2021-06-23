@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\andre\OneDrive\Ambiente de Trabalho\Last one\mope\DesenvolvimentoApps\Projeto_DA\Base de dados\BooKids.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\simon\OneDrive\Público\Imagens\Documentos\GitHub\ProjetoDesenvolvimento\Projeto_DA\Base de dados\BooKids.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
