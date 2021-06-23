@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E50FBB34-4317-4A35-99C0-4363A006599C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_DA</RootNamespace>
+    <AssemblyName>Projeto_DA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base de dados\Animador.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\BooKids.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooKids.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\BooKids.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\BooKids.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooKids.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Cliente.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Colaboracao.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Compra.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\DetalheCompra.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Escola.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Evento.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Filho.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Inscricao.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Participacao.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Pessoa.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\Produto.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base de dados\TipoProduto.cs">
+      <DependentUpon>BooKids.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BooKidsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooKidsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Animador.partial.cs" />
+    <Compile Include="Classes\Cliente.partial.cs" />
+    <Compile Include="Classes\Compra.partial.cs" />
+    <Compile Include="Classes\Escola.partial.cs" />
+    <Compile Include="Classes\Evento.partial.cs" />
+    <Compile Include="Classes\Produto.partial.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Animacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Animacao.Designer.cs">
+      <DependentUpon>Animacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Escolas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Escolas.Designer.cs">
+      <DependentUpon>Escolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eventos.Designer.cs">
+      <DependentUpon>Eventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Produtos.Designer.cs">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Animacao.resx">
+      <DependentUpon>Animacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Escolas.resx">
+      <DependentUpon>Escolas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eventos.resx">
+      <DependentUpon>Eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Produtos.resx">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Base de dados\BooKids.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BooKids.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Base de dados\BooKids.edmx.diagram">
+      <DependentUpon>BooKids.edmx</DependentUpon>
+    </None>
+    <None Include="BooKidsDataSet.xsc">
+      <DependentUpon>BooKidsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BooKidsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BooKidsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BooKidsDataSet.xss">
+      <DependentUpon>BooKidsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Home.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Animador1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Cliente1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Colaboracao1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Compra1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.DetalheCompra1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Escola1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Evento1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Filho1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Inscricao1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Participacao1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Pessoa1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.Produto1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Base_de_dados.TipoProduto1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Properties.Resources1.datasource" />
+    <None Include="Properties\DataSources\Projeto_DA.Properties.Settings1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Base de dados\BooKids.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BooKids.Context.cs</LastGenOutput>
+      <DependentUpon>BooKids.edmx</DependentUpon>
+    </Content>
+    <Content Include="Base de dados\BooKids.edmx.sql" />
+    <Content Include="Base de dados\BooKids.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BooKids.cs</LastGenOutput>
+      <DependentUpon>BooKids.edmx</DependentUpon>
+    </Content>
+    <Content Include="Imagens\Animação.jpg" />
+    <Content Include="Imagens\Escolas.jpg" />
+    <Content Include="Imagens\Eventos.jpg" />
+    <Content Include="Imagens\Produtos.jpg" />
+    <Content Include="Imagens\Vendas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

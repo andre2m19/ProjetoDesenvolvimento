@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BooKids.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BooKidsStoreContainer">
+    <EntitySet Name="TipoProdutoes" EntityType="BooKids.Store.TipoProdutoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Produtoes" EntityType="BooKids.Store.Produtoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalheCompras" EntityType="BooKids.Store.DetalheCompras" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Compras" EntityType="BooKids.Store.Compras" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoas" EntityType="BooKids.Store.Pessoas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inscricaos" EntityType="BooKids.Store.Inscricaos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Eventoes" EntityType="BooKids.Store.Eventoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Participacaos" EntityType="BooKids.Store.Participacaos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Colaboracaos" EntityType="BooKids.Store.Colaboracaos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Escolas" EntityType="BooKids.Store.Escolas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoas_Filho" EntityType="BooKids.Store.Pessoas_Filho" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoas_Animador" EntityType="BooKids.Store.Pessoas_Animador" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoas_Cliente" EntityType="BooKids.Store.Pessoas_Cliente" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="EscolaFilho" Association="BooKids.Store.EscolaFilho">
+      <End Role="Escola" EntitySet="Escolas" />
+      <End Role="Filho" EntitySet="Pessoas_Filho" />
+    </AssociationSet>
+    <AssociationSet Name="EscolaParticipacao" Association="BooKids.Store.EscolaParticipacao">
+      <End Role="Escola" EntitySet="Escolas" />
+      <End Role="Participacao" EntitySet="Participacaos" />
+    </AssociationSet>
+    <AssociationSet Name="EventoParticipacao" Association="BooKids.Store.EventoParticipacao">
+      <End Role="Evento" EntitySet="Eventoes" />
+      <End Role="Participacao" EntitySet="Participacaos" />
+    </AssociationSet>
+    <AssociationSet Name="EventoColaboracao" Association="BooKids.Store.EventoColaboracao">
+      <End Role="Evento" EntitySet="Eventoes" />
+      <End Role="Colaboracao" EntitySet="Colaboracaos" />
+    </AssociationSet>
+    <AssociationSet Name="AnimadorColaboracao" Association="BooKids.Store.AnimadorColaboracao">
+      <End Role="Animador" EntitySet="Pessoas_Animador" />
+      <End Role="Colaboracao" EntitySet="Colaboracaos" />
+    </AssociationSet>
+    <AssociationSet Name="EventoInscricao" Association="BooKids.Store.EventoInscricao">
+      <End Role="Evento" EntitySet="Eventoes" />
+      <End Role="Inscricao" EntitySet="Inscricaos" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteCompra" Association="BooKids.Store.ClienteCompra">
+      <End Role="Cliente" EntitySet="Pessoas_Cliente" />
+      <End Role="Compra" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="CompraDetalheCompra" Association="BooKids.Store.CompraDetalheCompra">
+      <End Role="Compra" EntitySet="Compras" />
+      <End Role="DetalheCompra" EntitySet="DetalheCompras" />
+    </AssociationSet>
+    <AssociationSet Name="ProdutoDetalheCompra" Association="BooKids.Store.ProdutoDetalheCompra">
+      <End Role="Produto" EntitySet="Produtoes" />
+      <End Role="DetalheCompra" EntitySet="DetalheCompras" />
+    </AssociationSet>
+    <AssociationSet Name="TipoProdutoProduto" Association="BooKids.Store.TipoProdutoProduto">
+      <End Role="TipoProduto" EntitySet="TipoProdutoes" />
+      <End Role="Produto" EntitySet="Produtoes" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteFilho" Association="BooKids.Store.ClienteFilho">
+      <End Role="Cliente" EntitySet="Pessoas_Cliente" />
+      <End Role="Filho" EntitySet="Pessoas_Filho" />
+    </AssociationSet>
+    <AssociationSet Name="FilhoInscricao" Association="BooKids.Store.FilhoInscricao">
+      <End Role="Filho" EntitySet="Pessoas_Filho" />
+      <End Role="Inscricao" EntitySet="Inscricaos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filho_inherits_Pessoa" Association="BooKids.Store.FK_Filho_inherits_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Filho" EntitySet="Pessoas_Filho" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Animador_inherits_Pessoa" Association="BooKids.Store.FK_Animador_inherits_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Animador" EntitySet="Pessoas_Animador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_inherits_Pessoa" Association="BooKids.Store.FK_Cliente_inherits_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Cliente" EntitySet="Pessoas_Cliente" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TipoProdutoes">
+    <Key>
+      <PropertyRef Name="CodTipoProduto" />
+    </Key>
+    <Property Name="CodTipoProduto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produtoes">
+    <Key>
+      <PropertyRef Name="CodProduto" />
+      <PropertyRef Name="CodTipoProduto" />
+    </Key>
+    <Property Name="CodProduto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designacao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Preco" Type="int" Nullable="false" />
+    <Property Name="CodTipoProduto" Type="int" Nullable="false" />
+    <Property Name="StockExistente" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TipoProduto_CodTipoProduto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalheCompras">
+    <Key>
+      <PropertyRef Name="ComprasNrCompra" />
+    </Key>
+    <Property Name="Quantidade" Type="smallint" Nullable="false" />
+    <Property Name="ComprasNrCompra" Type="int" Nullable="false" />
+    <Property Name="ProdutosCodProduto" Type="int" Nullable="false" />
+    <Property Name="Compras_NrCompra" Type="int" Nullable="false" />
+    <Property Name="Produtos_CodProduto" Type="int" Nullable="false" />
+    <Property Name="Produtos_CodTipoProduto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="NrCompra" />
+    </Key>
+    <Property Name="Data" Type="datetime" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UtilizouCartao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NrCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="ProdutosCodProduto" Type="int" Nullable="false" />
+    <Property Name="Clientes_IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoas">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Localidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodPostal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="int" Nullable="false" />
+    <Property Name="Telemovel" Type="int" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inscricaos">
+    <Key>
+      <PropertyRef Name="FilhosIdPessoa" />
+      <PropertyRef Name="EventosNrEvento" />
+    </Key>
+    <Property Name="Confirmada" Type="nvarchar(max)" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilhosIdPessoa" Type="int" Nullable="false" />
+    <Property Name="EventosNrEvento" Type="int" Nullable="false" />
+    <Property Name="Eventos_NrEvento" Type="int" Nullable="false" />
+    <Property Name="Filhos_IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Eventoes">
+    <Key>
+      <PropertyRef Name="NrEvento" />
+    </Key>
+    <Property Name="NrEvento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Local" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataHora" Type="datetime" Nullable="false" />
+    <Property Name="LimitePartcipacoes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdadeInferior" Type="int" Nullable="false" />
+    <Property Name="IdadeSuperior" Type="int" Nullable="false" />
+    <Property Name="TipoEvento" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Participacaos">
+    <Key>
+      <PropertyRef Name="IdEscola" />
+      <PropertyRef Name="NrEvento" />
+    </Key>
+    <Property Name="IdEscola" Type="int" Nullable="false" />
+    <Property Name="NrEvento" Type="int" Nullable="false" />
+    <Property Name="Escola_IdEscola" Type="int" Nullable="false" />
+    <Property Name="Evento_NrEvento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Colaboracaos">
+    <Key>
+      <PropertyRef Name="NrEvento" />
+      <PropertyRef Name="IdAnimador" />
+    </Key>
+    <Property Name="NrEvento" Type="int" Nullable="false" />
+    <Property Name="IdAnimador" Type="int" Nullable="false" />
+    <Property Name="Eventos_NrEvento" Type="int" Nullable="false" />
+    <Property Name="Animadores_IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Escolas">
+    <Key>
+      <PropertyRef Name="IdEscola" />
+    </Key>
+    <Property Name="IdEscola" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodPostal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Localidade" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoas_Filho">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="Sexo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
+    <Property Name="IdEscola" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdProgenitor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+    <Property Name="Escolas_IdEscola" Type="int" Nullable="false" />
+    <Property Name="Clientes_IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoas_Animador">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="Especialidade" Type="nvarchar(max)" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoas_Cliente">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="ValorOferta" Type="int" Nullable="false" />
+    <Property Name="NrCartao" Type="int" Nullable="false" />
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="EscolaFilho">
+    <End Role="Escola" Type="BooKids.Store.Escolas" Multiplicity="1" />
+    <End Role="Filho" Type="BooKids.Store.Pessoas_Filho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="IdEscola" />
+      </Principal>
+      <Dependent Role="Filho">
+        <PropertyRef Name="Escolas_IdEscola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EscolaParticipacao">
+    <End Role="Escola" Type="BooKids.Store.Escolas" Multiplicity="1" />
+    <End Role="Participacao" Type="BooKids.Store.Participacaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="IdEscola" />
+      </Principal>
+      <Dependent Role="Participacao">
+        <PropertyRef Name="Escola_IdEscola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventoParticipacao">
+    <End Role="Evento" Type="BooKids.Store.Eventoes" Multiplicity="1" />
+    <End Role="Participacao" Type="BooKids.Store.Participacaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="NrEvento" />
+      </Principal>
+      <Dependent Role="Participacao">
+        <PropertyRef Name="Evento_NrEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventoColaboracao">
+    <End Role="Evento" Type="BooKids.Store.Eventoes" Multiplicity="1" />
+    <End Role="Colaboracao" Type="BooKids.Store.Colaboracaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="NrEvento" />
+      </Principal>
+      <Dependent Role="Colaboracao">
+        <PropertyRef Name="Eventos_NrEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AnimadorColaboracao">
+    <End Role="Animador" Type="BooKids.Store.Pessoas_Animador" Multiplicity="1" />
+    <End Role="Colaboracao" Type="BooKids.Store.Colaboracaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Animador">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Colaboracao">
+        <PropertyRef Name="Animadores_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventoInscricao">
+    <End Role="Evento" Type="BooKids.Store.Eventoes" Multiplicity="1" />
+    <End Role="Inscricao" Type="BooKids.Store.Inscricaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="NrEvento" />
+      </Principal>
+      <Dependent Role="Inscricao">
+        <PropertyRef Name="Eventos_NrEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteCompra">
+    <End Role="Cliente" Type="BooKids.Store.Pessoas_Cliente" Multiplicity="1" />
+    <End Role="Compra" Type="BooKids.Store.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="Clientes_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CompraDetalheCompra">
+    <End Role="Compra" Type="BooKids.Store.Compras" Multiplicity="1" />
+    <End Role="DetalheCompra" Type="BooKids.Store.DetalheCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="NrCompra" />
+      </Principal>
+      <Dependent Role="DetalheCompra">
+        <PropertyRef Name="Compras_NrCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProdutoDetalheCompra">
+    <End Role="Produto" Type="BooKids.Store.Produtoes" Multiplicity="1" />
+    <End Role="DetalheCompra" Type="BooKids.Store.DetalheCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="CodProduto" />
+        <PropertyRef Name="CodTipoProduto" />
+      </Principal>
+      <Dependent Role="DetalheCompra">
+        <PropertyRef Name="Produtos_CodProduto" />
+        <PropertyRef Name="Produtos_CodTipoProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TipoProdutoProduto">
+    <End Role="TipoProduto" Type="BooKids.Store.TipoProdutoes" Multiplicity="1" />
+    <End Role="Produto" Type="BooKids.Store.Produtoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProduto">
+        <PropertyRef Name="CodTipoProduto" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="TipoProduto_CodTipoProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteFilho">
+    <End Role="Cliente" Type="BooKids.Store.Pessoas_Cliente" Multiplicity="1" />
+    <End Role="Filho" Type="BooKids.Store.Pessoas_Filho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Filho">
+        <PropertyRef Name="Clientes_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FilhoInscricao">
+    <End Role="Filho" Type="BooKids.Store.Pessoas_Filho" Multiplicity="1" />
+    <End Role="Inscricao" Type="BooKids.Store.Inscricaos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filho">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Inscricao">
+        <PropertyRef Name="Filhos_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filho_inherits_Pessoa">
+    <End Role="Pessoa" Type="BooKids.Store.Pessoas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Filho" Type="BooKids.Store.Pessoas_Filho" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Filho">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Animador_inherits_Pessoa">
+    <End Role="Pessoa" Type="BooKids.Store.Pessoas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Animador" Type="BooKids.Store.Pessoas_Animador" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Animador">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_inherits_Pessoa">
+    <End Role="Pessoa" Type="BooKids.Store.Pessoas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Cliente" Type="BooKids.Store.Pessoas_Cliente" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BooKids" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BooKidsContainer4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TipoProdutoes" EntityType="BooKids.TipoProduto" />
+          <EntitySet Name="Produtoes" EntityType="BooKids.Produto" />
+          <EntitySet Name="DetalheCompras" EntityType="BooKids.DetalheCompra" />
+          <EntitySet Name="Compras" EntityType="BooKids.Compra" />
+          <EntitySet Name="Pessoas" EntityType="BooKids.Pessoa" />
+          <EntitySet Name="Inscricaos" EntityType="BooKids.Inscricao" />
+          <EntitySet Name="Eventoes" EntityType="BooKids.Evento" />
+          <EntitySet Name="Participacaos" EntityType="BooKids.Participacao" />
+          <EntitySet Name="Colaboracaos" EntityType="BooKids.Colaboracao" />
+          <EntitySet Name="Escolas" EntityType="BooKids.Escola" />
+          <AssociationSet Name="EscolaFilho" Association="BooKids.EscolaFilho">
+            <End Role="Escola" EntitySet="Escolas" />
+            <End Role="Filho" EntitySet="Pessoas" />
+          </AssociationSet>
+          <AssociationSet Name="EscolaParticipacao" Association="BooKids.EscolaParticipacao">
+            <End Role="Escola" EntitySet="Escolas" />
+            <End Role="Participacao" EntitySet="Participacaos" />
+          </AssociationSet>
+          <AssociationSet Name="EventoParticipacao" Association="BooKids.EventoParticipacao">
+            <End Role="Evento" EntitySet="Eventoes" />
+            <End Role="Participacao" EntitySet="Participacaos" />
+          </AssociationSet>
+          <AssociationSet Name="EventoColaboracao" Association="BooKids.EventoColaboracao">
+            <End Role="Evento" EntitySet="Eventoes" />
+            <End Role="Colaboracao" EntitySet="Colaboracaos" />
+          </AssociationSet>
+          <AssociationSet Name="AnimadorColaboracao" Association="BooKids.AnimadorColaboracao">
+            <End Role="Animador" EntitySet="Pessoas" />
+            <End Role="Colaboracao" EntitySet="Colaboracaos" />
+          </AssociationSet>
+          <AssociationSet Name="EventoInscricao" Association="BooKids.EventoInscricao">
+            <End Role="Evento" EntitySet="Eventoes" />
+            <End Role="Inscricao" EntitySet="Inscricaos" />
+          </AssociationSet>
+          <AssociationSet Name="ClienteCompra" Association="BooKids.ClienteCompra">
+            <End Role="Cliente" EntitySet="Pessoas" />
+            <End Role="Compra" EntitySet="Compras" />
+          </AssociationSet>
+          <AssociationSet Name="CompraDetalheCompra" Association="BooKids.CompraDetalheCompra">
+            <End Role="Compra" EntitySet="Compras" />
+            <End Role="DetalheCompra" EntitySet="DetalheCompras" />
+          </AssociationSet>
+          <AssociationSet Name="ProdutoDetalheCompra" Association="BooKids.ProdutoDetalheCompra">
+            <End Role="Produto" EntitySet="Produtoes" />
+            <End Role="DetalheCompra" EntitySet="DetalheCompras" />
+          </AssociationSet>
+          <AssociationSet Name="TipoProdutoProduto" Association="BooKids.TipoProdutoProduto">
+            <End Role="TipoProduto" EntitySet="TipoProdutoes" />
+            <End Role="Produto" EntitySet="Produtoes" />
+          </AssociationSet>
+          <AssociationSet Name="ClienteFilho" Association="BooKids.ClienteFilho">
+            <End Role="Cliente" EntitySet="Pessoas" />
+            <End Role="Filho" EntitySet="Pessoas" />
+          </AssociationSet>
+          <AssociationSet Name="FilhoInscricao" Association="BooKids.FilhoInscricao">
+            <End Role="Filho" EntitySet="Pessoas" />
+            <End Role="Inscricao" EntitySet="Inscricaos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TipoProduto">
+          <Key>
+            <PropertyRef Name="CodTipoProduto" />
+          </Key>
+          <Property Name="CodTipoProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Produtos" Relationship="BooKids.TipoProdutoProduto" FromRole="TipoProduto" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="CodProduto" />
+            <PropertyRef Name="CodTipoProduto" />
+          </Key>
+          <Property Name="CodProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Designacao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Preco" Type="Int32" Nullable="false" />
+          <Property Name="CodTipoProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="StockExistente" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DetalheCompras" Relationship="BooKids.ProdutoDetalheCompra" FromRole="Produto" ToRole="DetalheCompra" />
+          <NavigationProperty Name="TipoProduto" Relationship="BooKids.TipoProdutoProduto" FromRole="Produto" ToRole="TipoProduto" />
+        </EntityType>
+        <EntityType Name="DetalheCompra">
+          <Key>
+            <PropertyRef Name="ComprasNrCompra" />
+          </Key>
+          <Property Name="Quantidade" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="ComprasNrCompra" Type="Int32" Nullable="false" />
+          <Property Name="ProdutosCodProduto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Compras" Relationship="BooKids.CompraDetalheCompra" FromRole="DetalheCompra" ToRole="Compra" />
+          <NavigationProperty Name="Produtos" Relationship="BooKids.ProdutoDetalheCompra" FromRole="DetalheCompra" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="Compra">
+          <Key>
+            <PropertyRef Name="NrCompra" />
+          </Key>
+          <Property Name="Data" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="3" />
+          <Property Name="UtilizouCartao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NrCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="ProdutosCodProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Clientes" Relationship="BooKids.ClienteCompra" FromRole="Compra" ToRole="Cliente" />
+          <NavigationProperty Name="DetalheCompras" Relationship="BooKids.CompraDetalheCompra" FromRole="Compra" ToRole="DetalheCompra" />
+        </EntityType>
+        <EntityType Name="Cliente" BaseType="BooKids.Pessoa">
+          <Property Name="ValorOferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="NrCartao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Compras" Relationship="BooKids.ClienteCompra" FromRole="Cliente" ToRole="Compra" />
+          <NavigationProperty Name="Filhos" Relationship="BooKids.ClienteFilho" FromRole="Cliente" ToRole="Filho" />
+        </EntityType>
+        <EntityType Name="Pessoa">
+          <Key>
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Name="IdPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Morada" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Localidade" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CodPostal" Type="String" Nullable="false" />
+          <Property Name="Telefone" Type="Int32" Nullable="false" />
+          <Property Name="Telemovel" Type="Int32" Nullable="false" />
+          <Property Name="Mail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Inscricao">
+          <Key>
+            <PropertyRef Name="FilhosIdPessoa" />
+            <PropertyRef Name="EventosNrEvento" />
+          </Key>
+          <Property Name="Confirmada" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FilhosIdPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="EventosNrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Eventos" Relationship="BooKids.EventoInscricao" FromRole="Inscricao" ToRole="Evento" />
+          <NavigationProperty Name="Filhos" Relationship="BooKids.FilhoInscricao" FromRole="Inscricao" ToRole="Filho" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="NrEvento" />
+          </Key>
+          <Property Name="NrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Local" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DataHora" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="None" Precision="3" />
+          <Property Name="LimitePartcipacoes" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IdadeInferior" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="IdadeSuperior" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="TipoEvento" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Participacoes" Relationship="BooKids.EventoParticipacao" FromRole="Evento" ToRole="Participacao" />
+          <NavigationProperty Name="Colaboracoes" Relationship="BooKids.EventoColaboracao" FromRole="Evento" ToRole="Colaboracao" />
+          <NavigationProperty Name="Inscricoes" Relationship="BooKids.EventoInscricao" FromRole="Evento" ToRole="Inscricao" />
+        </EntityType>
+        <EntityType Name="Participacao">
+          <Key>
+            <PropertyRef Name="IdEscola" />
+            <PropertyRef Name="NrEvento" />
+          </Key>
+          <Property Name="IdEscola" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="NrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Escola" Relationship="BooKids.EscolaParticipacao" FromRole="Participacao" ToRole="Escola" />
+          <NavigationProperty Name="Evento" Relationship="BooKids.EventoParticipacao" FromRole="Participacao" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Colaboracao">
+          <Key>
+            <PropertyRef Name="NrEvento" />
+            <PropertyRef Name="IdAnimador" />
+          </Key>
+          <Property Name="NrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="IdAnimador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Eventos" Relationship="BooKids.EventoColaboracao" FromRole="Colaboracao" ToRole="Evento" />
+          <NavigationProperty Name="Animadores" Relationship="BooKids.AnimadorColaboracao" FromRole="Colaboracao" ToRole="Animador" />
+        </EntityType>
+        <EntityType Name="Animador" BaseType="BooKids.Pessoa">
+          <Property Name="Especialidade" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Colaboracoes" Relationship="BooKids.AnimadorColaboracao" FromRole="Animador" ToRole="Colaboracao" />
+        </EntityType>
+        <EntityType Name="Escola">
+          <Key>
+            <PropertyRef Name="IdEscola" />
+          </Key>
+          <Property Name="IdEscola" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Morada" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Telefone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CodPostal" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Localidade" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Filhos" Relationship="BooKids.EscolaFilho" FromRole="Escola" ToRole="Filho" />
+          <NavigationProperty Name="Participacoes" Relationship="BooKids.EscolaParticipacao" FromRole="Escola" ToRole="Participacao" />
+        </EntityType>
+        <EntityType Name="Filho" BaseType="BooKids.Pessoa">
+          <Property Name="Sexo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdEscola" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IdProgenitor" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Escolas" Relationship="BooKids.EscolaFilho" FromRole="Filho" ToRole="Escola" />
+          <NavigationProperty Name="Clientes" Relationship="BooKids.ClienteFilho" FromRole="Filho" ToRole="Cliente" />
+          <NavigationProperty Name="Inscricaos" Relationship="BooKids.FilhoInscricao" FromRole="Filho" ToRole="Inscricao" />
+          </EntityType>
+        <Association Name="EscolaFilho">
+          <End Type="BooKids.Escola" Role="Escola" Multiplicity="1" />
+          <End Type="BooKids.Filho" Role="Filho" Multiplicity="*" />
+        </Association>
+        <Association Name="EscolaParticipacao">
+          <End Type="BooKids.Escola" Role="Escola" Multiplicity="1" />
+          <End Type="BooKids.Participacao" Role="Participacao" Multiplicity="*" />
+        </Association>
+        <Association Name="EventoParticipacao">
+          <End Type="BooKids.Evento" Role="Evento" Multiplicity="1" />
+          <End Type="BooKids.Participacao" Role="Participacao" Multiplicity="*" />
+        </Association>
+        <Association Name="EventoColaboracao">
+          <End Type="BooKids.Evento" Role="Evento" Multiplicity="1" />
+          <End Type="BooKids.Colaboracao" Role="Colaboracao" Multiplicity="*" />
+        </Association>
+        <Association Name="AnimadorColaboracao">
+          <End Type="BooKids.Animador" Role="Animador" Multiplicity="1" />
+          <End Type="BooKids.Colaboracao" Role="Colaboracao" Multiplicity="*" />
+        </Association>
+        <Association Name="EventoInscricao">
+          <End Type="BooKids.Evento" Role="Evento" Multiplicity="1" />
+          <End Type="BooKids.Inscricao" Role="Inscricao" Multiplicity="*" />
+        </Association>
+        <Association Name="ClienteCompra">
+          <End Type="BooKids.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="BooKids.Compra" Role="Compra" Multiplicity="*" />
+        </Association>
+        <Association Name="CompraDetalheCompra">
+          <End Type="BooKids.Compra" Role="Compra" Multiplicity="1" />
+          <End Type="BooKids.DetalheCompra" Role="DetalheCompra" Multiplicity="*" />
+        </Association>
+        <Association Name="ProdutoDetalheCompra">
+          <End Type="BooKids.Produto" Role="Produto" Multiplicity="1" />
+          <End Type="BooKids.DetalheCompra" Role="DetalheCompra" Multiplicity="*" />
+        </Association>
+        <Association Name="TipoProdutoProduto">
+          <End Type="BooKids.TipoProduto" Role="TipoProduto" Multiplicity="1" />
+          <End Type="BooKids.Produto" Role="Produto" Multiplicity="*" />
+        </Association>
+        <Association Name="ClienteFilho">
+          <End Type="BooKids.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="BooKids.Filho" Role="Filho" Multiplicity="*" />
+        </Association>
+        <Association Name="FilhoInscricao">
+          <End Type="BooKids.Filho" Role="Filho" Multiplicity="1" />
+          <End Type="BooKids.Inscricao" Role="Inscricao" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BooKidsStoreContainer" CdmEntityContainer="BooKidsContainer4">
+    <EntitySetMapping Name="TipoProdutoes">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.TipoProduto)">
+        <MappingFragment StoreEntitySet="TipoProdutoes">
+          <ScalarProperty Name="CodTipoProduto" ColumnName="CodTipoProduto" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produtoes">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Produto)">
+        <MappingFragment StoreEntitySet="Produtoes">
+          <ScalarProperty Name="CodProduto" ColumnName="CodProduto" />
+          <ScalarProperty Name="CodTipoProduto" ColumnName="CodTipoProduto" />
+          <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="StockExistente" ColumnName="StockExistente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalheCompras">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.DetalheCompra)">
+        <MappingFragment StoreEntitySet="DetalheCompras">
+          <ScalarProperty Name="ComprasNrCompra" ColumnName="ComprasNrCompra" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="ProdutosCodProduto" ColumnName="ProdutosCodProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compras">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Compra)">
+        <MappingFragment StoreEntitySet="Compras">
+          <ScalarProperty Name="NrCompra" ColumnName="NrCompra" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="UtilizouCartao" ColumnName="UtilizouCartao" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="ProdutosCodProduto" ColumnName="ProdutosCodProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoas">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Pessoa)">
+        <MappingFragment StoreEntitySet="Pessoas">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="Localidade" ColumnName="Localidade" />
+          <ScalarProperty Name="CodPostal" ColumnName="CodPostal" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Telemovel" ColumnName="Telemovel" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Filho)">
+        <MappingFragment StoreEntitySet="Pessoas_Filho">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+          <ScalarProperty Name="IdProgenitor" ColumnName="IdProgenitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Animador)">
+        <MappingFragment StoreEntitySet="Pessoas_Animador">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Especialidade" ColumnName="Especialidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Cliente)">
+        <MappingFragment StoreEntitySet="Pessoas_Cliente">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="ValorOferta" ColumnName="ValorOferta" />
+          <ScalarProperty Name="NrCartao" ColumnName="NrCartao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inscricaos">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Inscricao)">
+        <MappingFragment StoreEntitySet="Inscricaos">
+          <ScalarProperty Name="FilhosIdPessoa" ColumnName="FilhosIdPessoa" />
+          <ScalarProperty Name="EventosNrEvento" ColumnName="EventosNrEvento" />
+          <ScalarProperty Name="Confirmada" ColumnName="Confirmada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eventoes">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Evento)">
+        <MappingFragment StoreEntitySet="Eventoes">
+          <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+          <ScalarProperty Name="LimitePartcipacoes" ColumnName="LimitePartcipacoes" />
+          <ScalarProperty Name="IdadeInferior" ColumnName="IdadeInferior" />
+          <ScalarProperty Name="IdadeSuperior" ColumnName="IdadeSuperior" />
+          <ScalarProperty Name="TipoEvento" ColumnName="TipoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participacaos">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Participacao)">
+        <MappingFragment StoreEntitySet="Participacaos">
+          <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+          <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colaboracaos">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Colaboracao)">
+        <MappingFragment StoreEntitySet="Colaboracaos">
+          <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+          <ScalarProperty Name="IdAnimador" ColumnName="IdAnimador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Escolas">
+      <EntityTypeMapping TypeName="IsTypeOf(BooKids.Escola)">
+        <MappingFragment StoreEntitySet="Escolas">
+          <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="CodPostal" ColumnName="CodPostal" />
+          <ScalarProperty Name="Localidade" ColumnName="Localidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EscolaFilho" TypeName="BooKids.EscolaFilho" StoreEntitySet="Pessoas_Filho">
+      <EndProperty Name="Escola">
+        <ScalarProperty Name="IdEscola" ColumnName="Escolas_IdEscola" />
+      </EndProperty>
+      <EndProperty Name="Filho">
+        <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EscolaParticipacao" TypeName="BooKids.EscolaParticipacao" StoreEntitySet="Participacaos">
+      <EndProperty Name="Escola">
+        <ScalarProperty Name="IdEscola" ColumnName="Escola_IdEscola" />
+      </EndProperty>
+      <EndProperty Name="Participacao">
+        <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+        <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EventoParticipacao" TypeName="BooKids.EventoParticipacao" StoreEntitySet="Participacaos">
+      <EndProperty Name="Evento">
+        <ScalarProperty Name="NrEvento" ColumnName="Evento_NrEvento" />
+      </EndProperty>
+      <EndProperty Name="Participacao">
+        <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+        <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EventoColaboracao" TypeName="BooKids.EventoColaboracao" StoreEntitySet="Colaboracaos">
+      <EndProperty Name="Evento">
+        <ScalarProperty Name="NrEvento" ColumnName="Eventos_NrEvento" />
+      </EndProperty>
+      <EndProperty Name="Colaboracao">
+        <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+        <ScalarProperty Name="IdAnimador" ColumnName="IdAnimador" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AnimadorColaboracao" TypeName="BooKids.AnimadorColaboracao" StoreEntitySet="Colaboracaos">
+      <EndProperty Name="Animador">
+        <ScalarProperty Name="IdPessoa" ColumnName="Animadores_IdPessoa" />
+      </EndProperty>
+      <EndProperty Name="Colaboracao">
+        <ScalarProperty Name="NrEvento" ColumnName="NrEvento" />
+        <ScalarProperty Name="IdAnimador" ColumnName="IdAnimador" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EventoInscricao" TypeName="BooKids.EventoInscricao" StoreEntitySet="Inscricaos">
+      <EndProperty Name="Evento">
+        <ScalarProperty Name="NrEvento" ColumnName="Eventos_NrEvento" />
+      </EndProperty>
+      <EndProperty Name="Inscricao">
+        <ScalarProperty Name="FilhosIdPessoa" ColumnName="FilhosIdPessoa" />
+        <ScalarProperty Name="EventosNrEvento" ColumnName="EventosNrEvento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteCompra" TypeName="BooKids.ClienteCompra" StoreEntitySet="Compras">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="IdPessoa" ColumnName="Clientes_IdPessoa" />
+      </EndProperty>
+      <EndProperty Name="Compra">
+        <ScalarProperty Name="NrCompra" ColumnName="NrCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CompraDetalheCompra" TypeName="BooKids.CompraDetalheCompra" StoreEntitySet="DetalheCompras">
+      <EndProperty Name="Compra">
+        <ScalarProperty Name="NrCompra" ColumnName="Compras_NrCompra" />
+      </EndProperty>
+      <EndProperty Name="DetalheCompra">
+        <ScalarProperty Name="ComprasNrCompra" ColumnName="ComprasNrCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProdutoDetalheCompra" TypeName="BooKids.ProdutoDetalheCompra" StoreEntitySet="DetalheCompras">
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="CodProduto" ColumnName="Produtos_CodProduto" />
+        <ScalarProperty Name="CodTipoProduto" ColumnName="Produtos_CodTipoProduto" />
+      </EndProperty>
+      <EndProperty Name="DetalheCompra">
+        <ScalarProperty Name="ComprasNrCompra" ColumnName="ComprasNrCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TipoProdutoProduto" TypeName="BooKids.TipoProdutoProduto" StoreEntitySet="Produtoes">
+      <EndProperty Name="TipoProduto">
+        <ScalarProperty Name="CodTipoProduto" ColumnName="TipoProduto_CodTipoProduto" />
+      </EndProperty>
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="CodProduto" ColumnName="CodProduto" />
+        <ScalarProperty Name="CodTipoProduto" ColumnName="CodTipoProduto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteFilho" TypeName="BooKids.ClienteFilho" StoreEntitySet="Pessoas_Filho">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="IdPessoa" ColumnName="Clientes_IdPessoa" />
+      </EndProperty>
+      <EndProperty Name="Filho">
+        <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FilhoInscricao" TypeName="BooKids.FilhoInscricao" StoreEntitySet="Inscricaos">
+      <EndProperty Name="Filho">
+        <ScalarProperty Name="IdPessoa" ColumnName="Filhos_IdPessoa" />
+      </EndProperty>
+      <EndProperty Name="Inscricao">
+        <ScalarProperty Name="FilhosIdPessoa" ColumnName="FilhosIdPessoa" />
+        <ScalarProperty Name="EventosNrEvento" ColumnName="EventosNrEvento" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
