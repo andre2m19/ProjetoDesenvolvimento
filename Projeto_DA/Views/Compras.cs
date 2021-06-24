@@ -70,7 +70,7 @@ namespace Projeto_DA.Views
         {
             booKidsContainer4 = new BooKidsContainer4();
 
-            listBoxClientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
+            listBoxClientes.DataSource = booKidsContainer4.Compras.ToList<Compra>();
 
             LerDados();
 
