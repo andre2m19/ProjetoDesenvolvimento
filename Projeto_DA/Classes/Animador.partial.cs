@@ -8,7 +8,7 @@ namespace Projeto_DA.Base_de_dados
 {
     public partial class Animador
     {
-        public Animador(int idPessoa, string nome, string morada, string localidade, string codpostal, int telefone1, int telefone2, string mail, string especialidade)
+        public Animador(int idPessoa, string nome, string morada, string localidade, string codpostal, string telefone1, string telefone2, string mail, string especialidade)
         {
             IdPessoa = idPessoa;
             Nome = nome;

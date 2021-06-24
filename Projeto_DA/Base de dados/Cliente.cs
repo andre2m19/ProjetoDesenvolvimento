@@ -21,8 +21,9 @@ namespace Projeto_DA.Base_de_dados
             this.Filhos = new HashSet<Filho>();
         }
     
-        public int ValorOferta { get; set; }
-        public int NrCartao { get; set; }
+        public string ValorOferta { get; set; }
+        public string NrCartao { get; set; }
+      
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compras { get; set; }

@@ -19,8 +19,8 @@ namespace Projeto_DA.Base_de_dados
         public string Morada { get; set; }
         public string Localidade { get; set; }
         public string CodPostal { get; set; }
-        public int Telefone { get; set; }
-        public int Telemovel { get; set; }
+        public string Telefone { get; set; }
+        public string Telemovel { get; set; }
         public string Mail { get; set; }
     }
 }

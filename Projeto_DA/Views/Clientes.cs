@@ -20,10 +20,10 @@ namespace Projeto_DA.Views
         public Clientes()
         {
             InitializeComponent();
+            booKidsContainer4 = new BooKidsContainer4();
 
         }
-        BooKidsContainer4 bk = new BooKidsContainer4();
-   
+
 
         // ----------------- Criar cliente -----------------------
         private void btn_Registar_Click(object sender, EventArgs e)
@@ -32,11 +32,11 @@ namespace Projeto_DA.Views
             string Morada = tb_morada.Text;
             string Localidade = tb_localidade.Text;
             string CodPostal = tb_codpostal.Text;
-            int Telefone = int.Parse(tb_telefone.Text);
-            int Telemovel = int.Parse(tb_telemovel.Text);
+            string Telefone = tb_telefone.Text;
+            string Telemovel = tb_telemovel.Text;
             string Mail = tb_mail.Text;
-            int Nr_cartao = int.Parse(tb_Nrcartao.Text);
-            int Valor_oferta = int.Parse(tb_Valoroferta.Text);
+            string Nr_cartao = tb_Nrcartao.Text;
+            string Valor_oferta = tb_Valoroferta.Text;
 
 
             Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
@@ -45,8 +45,9 @@ namespace Projeto_DA.Views
             booKidsContainer4.SaveChanges();
 
             MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
-        
+
         }
+        // ------------- Função Ler dados da listbox Cliente -----
         private void LerDados()
         {
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>(); ;
@@ -71,6 +72,25 @@ namespace Projeto_DA.Views
             LerDados();
         }
 
+        // ------------------ Selecionar linha para alterar dados -----------------------
+        private void lb_registar_clientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lb_registar_clientes.SelectedIndex == -1)
+                return;
+
+            Cliente clienteSelecionado = (Cliente)lb_registar_clientes.SelectedItem;
+            tb_nome.Text = clienteSelecionado.Nome;
+            tb_morada.Text = clienteSelecionado.Morada;
+            tb_localidade.Text = clienteSelecionado.Localidade;
+            tb_codpostal.Text = clienteSelecionado.CodPostal;
+            tb_telefone.Text = clienteSelecionado.Telefone;
+            tb_telemovel.Text = clienteSelecionado.Telemovel;
+            tb_mail.Text = clienteSelecionado.Mail;
+            tb_Nrcartao.Text = clienteSelecionado.NrCartao;
+            tb_Valoroferta.Text = clienteSelecionado.ValorOferta;
+
+        }
+
         // -------------------- Alterar Cliente ---------------------------
         private void btn_Alterar_Click(object sender, EventArgs e)
         {
@@ -84,42 +104,20 @@ namespace Projeto_DA.Views
             clienteSelecionado.Morada = tb_nome.Text;
             clienteSelecionado.Localidade = tb_localidade.Text;
             clienteSelecionado.CodPostal = tb_codpostal.Text;
-            clienteSelecionado.Telefone = int.Parse(tb_telefone.Text);
-            clienteSelecionado.Telemovel = int.Parse(tb_telemovel.Text);
+            clienteSelecionado.Telefone = tb_telefone.Text;
+            clienteSelecionado.Telemovel = tb_telemovel.Text;
             clienteSelecionado.Mail = tb_mail.Text;
-            clienteSelecionado.NrCartao = int.Parse(tb_Nrcartao.Text);
-            clienteSelecionado.ValorOferta = int.Parse(tb_Valoroferta.Text);
+            clienteSelecionado.NrCartao = tb_Nrcartao.Text;
+            clienteSelecionado.ValorOferta = tb_Valoroferta.Text;
 
             lb_registar_clientes.DataSource = null;
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
-           
-        
+
+
 
             booKidsContainer4.SaveChanges();
             MessageBox.Show("Dados Alterados!");
         }
-
-        // ------------------ Slecionar linha para alterar dados -----------------------
-        private void lb_registar_clientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lb_registar_clientes.SelectedIndex == -1)
-                return;
-            
-            Cliente clienteSelecionado = (Cliente)lb_registar_clientes.SelectedItem;
-            tb_nome.Text = clienteSelecionado.Nome;
-            tb_morada.Text = clienteSelecionado.Morada;
-            tb_localidade.Text = clienteSelecionado.Localidade;
-            //tb_telefone.Text= clienteSelecionado.Telefone;
-            //tb_telemovel.Text = clienteSelecionado.Telemovel;
-            tb_mail.Text = clienteSelecionado.Mail;
-           // tb_Nrcartao.Text = clienteSelecionado.NrCartao;
-           // tb_Valoroferta.Text = clienteSelecionado.ValorOferta;
-            
-
-     
-           
-
-
-        }
     }
 }
+
