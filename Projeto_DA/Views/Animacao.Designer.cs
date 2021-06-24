@@ -41,6 +41,7 @@ namespace Projeto_DA.Views
             this.label1 = new System.Windows.Forms.Label();
             this.animadorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -59,16 +60,14 @@ namespace Projeto_DA.Views
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBoxAnimadores = new System.Windows.Forms.ListBox();
-            this.textBoxtelefone = new System.Windows.Forms.TextBox();
-            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             especialidadeLabel = new System.Windows.Forms.Label();
             localidadeLabel = new System.Windows.Forms.Label();
             mailLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).BeginInit();
             this.animadorBindingNavigator.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // especialidadeLabel
@@ -179,7 +178,7 @@ namespace Projeto_DA.Views
             this.animadorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.animadorBindingNavigator.Name = "animadorBindingNavigator";
             this.animadorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.animadorBindingNavigator.Size = new System.Drawing.Size(1157, 31);
+            this.animadorBindingNavigator.Size = new System.Drawing.Size(1157, 27);
             this.animadorBindingNavigator.TabIndex = 6;
             this.animadorBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -189,13 +188,17 @@ namespace Projeto_DA.Views
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // animadorBindingSource
+            // 
+            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
@@ -205,7 +208,7 @@ namespace Projeto_DA.Views
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -214,7 +217,7 @@ namespace Projeto_DA.Views
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -223,13 +226,13 @@ namespace Projeto_DA.Views
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -244,7 +247,7 @@ namespace Projeto_DA.Views
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -252,7 +255,7 @@ namespace Projeto_DA.Views
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover seguinte";
             // 
             // bindingNavigatorMoveLastItem
@@ -261,13 +264,13 @@ namespace Projeto_DA.Views
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // animadorBindingNavigatorSaveItem
             // 
@@ -275,7 +278,7 @@ namespace Projeto_DA.Views
             this.animadorBindingNavigatorSaveItem.Enabled = false;
             this.animadorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("animadorBindingNavigatorSaveItem.Image")));
             this.animadorBindingNavigatorSaveItem.Name = "animadorBindingNavigatorSaveItem";
-            this.animadorBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.animadorBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.animadorBindingNavigatorSaveItem.Text = "Salvar Dados";
             // 
             // especialidadeTextBox
@@ -339,24 +342,12 @@ namespace Projeto_DA.Views
             this.listBoxAnimadores.TabIndex = 0;
             this.listBoxAnimadores.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimadores_SelectedIndexChanged);
             // 
-            // textBoxtelefone
-            // 
-            this.textBoxtelefone.Location = new System.Drawing.Point(565, 52);
-            this.textBoxtelefone.Name = "textBoxtelefone";
-            this.textBoxtelefone.Size = new System.Drawing.Size(185, 22);
-            this.textBoxtelefone.TabIndex = 22;
-            // 
-            // animadorBindingSource
-            // 
-            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
-            // 
             // Animacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1157, 713);
-            this.Controls.Add(this.textBoxtelefone);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(especialidadeLabel);
             this.Controls.Add(this.especialidadeTextBox);
@@ -380,8 +371,8 @@ namespace Projeto_DA.Views
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).EndInit();
             this.animadorBindingNavigator.ResumeLayout(false);
             this.animadorBindingNavigator.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,6 +404,5 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBoxAnimadores;
-        private System.Windows.Forms.TextBox textBoxtelefone;
     }
 }

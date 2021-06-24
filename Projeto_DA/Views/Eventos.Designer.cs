@@ -61,6 +61,7 @@ namespace Projeto_DA.Views
             this.saveFileDialogTexto = new System.Windows.Forms.SaveFileDialog();
             this.participacoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inscricaosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             label11 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
@@ -242,7 +243,7 @@ namespace Projeto_DA.Views
             this.formatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1136, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1157, 28);
             this.menuStrip1.TabIndex = 92;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -333,12 +334,23 @@ namespace Projeto_DA.Views
             // 
             this.inscricaosBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Inscricao);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(621, 522);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
+            this.checkBox1.TabIndex = 96;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1157, 713);
+            this.ClientSize = new System.Drawing.Size(1157, 779);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Registar);
@@ -389,5 +401,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.ToolStripMenuItem formatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formatoTextoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formatoPDFToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

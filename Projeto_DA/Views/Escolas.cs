@@ -52,6 +52,14 @@ namespace Projeto_DA.Views
 
         private void btn_Registar_Click(object sender, EventArgs e)
         {
+
+            if (nomeTextBox.Text== ""  ||codPostalTextBox.Text == "" || localidadeTextBox.Text == "" || mailTextBox.Text == "" || moradaTextBox.Text == "" || telefoneTextBox.Text == "")
+            {
+                MessageBox.Show("Introduza os dados todos!");
+            }
+            else { 
+
+
             string codPostal = codPostalTextBox.Text;
             string localidade = localidadeTextBox.Text;
             string mail = mailTextBox.Text;
@@ -75,6 +83,7 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = "";
 
             MessageBox.Show("Dados Registados!");
+            }
         }
 
         private void btn_Apagar_Click(object sender, EventArgs e)
@@ -114,41 +123,7 @@ namespace Projeto_DA.Views
             MessageBox.Show("Dados Alterados!");
         }
 
-        private void nomeTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-                DialogResult dia = MessageBox.Show("Characters Only!", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void codPostalTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                DialogResult dia = MessageBox.Show("Number or Digit Only!", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void localidadeTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-                DialogResult dia = MessageBox.Show("Characters Only!", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void telefoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                DialogResult dia = MessageBox.Show("Number or Digit Only!", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        
 
         private void listBoxEscolas_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -177,64 +152,14 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = "";
         }
 
-        private void nomeLabel_Click(object sender, EventArgs e)
+
+        private void telefoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void nomeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void localidadeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void codPostalTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void codPostalLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void moradaTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void localidadeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mailTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void moradaLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefoneLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefoneTextBox_TextChanged(object sender, EventArgs e)
-        {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Introduza Números");
+            }
         }
     }
 }

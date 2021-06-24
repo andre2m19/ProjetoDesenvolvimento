@@ -206,7 +206,7 @@
     <Key>
       <PropertyRef Name="IdPessoa" />
     </Key>
-    <Property Name="Especialidade" Type="nvarchar(max)" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Especialidade" Type="nvarchar(max)" Nullable="false" />
     <Property Name="IdPessoa" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Pessoas_Cliente">
@@ -579,7 +579,7 @@
           <NavigationProperty Name="Animadores" Relationship="BooKids.AnimadorColaboracao" FromRole="Colaboracao" ToRole="Animador" />
         </EntityType>
         <EntityType Name="Animador" BaseType="BooKids.Pessoa">
-          <Property Name="Especialidade" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Especialidade" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Colaboracoes" Relationship="BooKids.AnimadorColaboracao" FromRole="Animador" ToRole="Colaboracao" />
         </EntityType>
         <EntityType Name="Escola">

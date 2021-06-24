@@ -28,24 +28,30 @@ namespace Projeto_DA.Views
         // ----------------- Criar cliente -----------------------
         private void btn_Registar_Click(object sender, EventArgs e)
         {
-            string Nome = tb_nome.Text;
-            string Morada = tb_morada.Text;
-            string Localidade = tb_localidade.Text;
-            string CodPostal = tb_codpostal.Text;
-            string Telefone = tb_telefone.Text;
-            string Telemovel = tb_telemovel.Text;
-            string Mail = tb_mail.Text;
-            string Nr_cartao = tb_Nrcartao.Text;
-            string Valor_oferta = tb_Valoroferta.Text;
+            if (tb_codpostal.Text == "" || tb_localidade.Text == "" || tb_mail.Text == "" || tb_morada.Text == "" || tb_nome.Text == "" || tb_Nrcartao.Text == "" || tb_telefone.Text == "" || tb_telemovel.Text == "" || tb_Valoroferta.Text == "")
+            {
+                MessageBox.Show("Introduza os dados todos!");
+            }
+            else
+            {
+                string Nome = tb_nome.Text;
+                string Morada = tb_morada.Text;
+                string Localidade = tb_localidade.Text;
+                string CodPostal = tb_codpostal.Text;
+                string Telefone = tb_telefone.Text;
+                string Telemovel = tb_telemovel.Text;
+                string Mail = tb_mail.Text;
+                string Nr_cartao = tb_Nrcartao.Text;
+                string Valor_oferta = tb_Valoroferta.Text;
 
 
-            Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
-            booKidsContainer4.Pessoas.Add(cliente);
+                Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
+                booKidsContainer4.Pessoas.Add(cliente);
 
-            booKidsContainer4.SaveChanges();
+                booKidsContainer4.SaveChanges();
 
-            MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
-
+                MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
+            }
         }
         // ------------- Função Ler dados da listbox Cliente -----
         private void LerDados()
@@ -117,6 +123,55 @@ namespace Projeto_DA.Views
 
             booKidsContainer4.SaveChanges();
             MessageBox.Show("Dados Alterados!");
+        }
+
+        private void tb_telefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Introduza Números");
+            }
+        }
+
+        private void tb_telemovel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Introduza Números");
+            }
+        }
+
+        private void tb_Nrcartao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Introduza Números");
+            }
+        }
+
+        private void tb_Valoroferta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Introduza Números");
+            }
+        }
+
+        private void buttonClean_Click(object sender, EventArgs e)
+        {
+            tb_codpostal.Text = "";
+            tb_localidade.Text = "";
+            tb_mail.Text = "";
+            tb_morada.Text = "";
+            tb_nome.Text = "";
+            tb_Nrcartao.Text = "";
+            tb_telefone.Text = "";
+            tb_telemovel.Text = "";
+            tb_Valoroferta.Text = "";
         }
     }
 }

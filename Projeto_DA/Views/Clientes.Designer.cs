@@ -54,6 +54,7 @@ namespace Projeto_DA.Views
             this.btn_Alterar = new System.Windows.Forms.Button();
             this.tb_codpostal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonClean = new System.Windows.Forms.Button();
             valorOfertaLabel = new System.Windows.Forms.Label();
             telemovelLabel1 = new System.Windows.Forms.Label();
             telefoneLabel1 = new System.Windows.Forms.Label();
@@ -66,6 +67,96 @@ namespace Projeto_DA.Views
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // valorOfertaLabel
+            // 
+            valorOfertaLabel.AutoSize = true;
+            valorOfertaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            valorOfertaLabel.Location = new System.Drawing.Point(89, 316);
+            valorOfertaLabel.Name = "valorOfertaLabel";
+            valorOfertaLabel.Size = new System.Drawing.Size(89, 17);
+            valorOfertaLabel.TabIndex = 42;
+            valorOfertaLabel.Text = "Valor Oferta:";
+            // 
+            // telemovelLabel1
+            // 
+            telemovelLabel1.AutoSize = true;
+            telemovelLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            telemovelLabel1.Location = new System.Drawing.Point(89, 282);
+            telemovelLabel1.Name = "telemovelLabel1";
+            telemovelLabel1.Size = new System.Drawing.Size(77, 17);
+            telemovelLabel1.TabIndex = 40;
+            telemovelLabel1.Text = "Telemovel:";
+            // 
+            // telefoneLabel1
+            // 
+            telefoneLabel1.AutoSize = true;
+            telefoneLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            telefoneLabel1.Location = new System.Drawing.Point(88, 248);
+            telefoneLabel1.Name = "telefoneLabel1";
+            telefoneLabel1.Size = new System.Drawing.Size(68, 17);
+            telefoneLabel1.TabIndex = 38;
+            telefoneLabel1.Text = "Telefone:";
+            // 
+            // nrCartaoLabel
+            // 
+            nrCartaoLabel.AutoSize = true;
+            nrCartaoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            nrCartaoLabel.Location = new System.Drawing.Point(88, 214);
+            nrCartaoLabel.Name = "nrCartaoLabel";
+            nrCartaoLabel.Size = new System.Drawing.Size(73, 17);
+            nrCartaoLabel.TabIndex = 36;
+            nrCartaoLabel.Text = "Nr Cartao:";
+            // 
+            // nomeLabel1
+            // 
+            nomeLabel1.AutoSize = true;
+            nomeLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            nomeLabel1.Location = new System.Drawing.Point(89, 44);
+            nomeLabel1.Name = "nomeLabel1";
+            nomeLabel1.Size = new System.Drawing.Size(49, 17);
+            nomeLabel1.TabIndex = 34;
+            nomeLabel1.Text = "Nome:";
+            // 
+            // moradaLabel1
+            // 
+            moradaLabel1.AutoSize = true;
+            moradaLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            moradaLabel1.Location = new System.Drawing.Point(88, 146);
+            moradaLabel1.Name = "moradaLabel1";
+            moradaLabel1.Size = new System.Drawing.Size(60, 17);
+            moradaLabel1.TabIndex = 32;
+            moradaLabel1.Text = "Morada:";
+            // 
+            // mailLabel1
+            // 
+            mailLabel1.AutoSize = true;
+            mailLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            mailLabel1.Location = new System.Drawing.Point(89, 112);
+            mailLabel1.Name = "mailLabel1";
+            mailLabel1.Size = new System.Drawing.Size(37, 17);
+            mailLabel1.TabIndex = 30;
+            mailLabel1.Text = "Mail:";
+            // 
+            // localidadeLabel1
+            // 
+            localidadeLabel1.AutoSize = true;
+            localidadeLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            localidadeLabel1.Location = new System.Drawing.Point(88, 78);
+            localidadeLabel1.Name = "localidadeLabel1";
+            localidadeLabel1.Size = new System.Drawing.Size(81, 17);
+            localidadeLabel1.TabIndex = 28;
+            localidadeLabel1.Text = "Localidade:";
+            // 
+            // codPostalLabel1
+            // 
+            codPostalLabel1.AutoSize = true;
+            codPostalLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            codPostalLabel1.Location = new System.Drawing.Point(88, 185);
+            codPostalLabel1.Name = "codPostalLabel1";
+            codPostalLabel1.Size = new System.Drawing.Size(80, 17);
+            codPostalLabel1.TabIndex = 24;
+            codPostalLabel1.Text = "Cod Postal:";
             // 
             // groupBox1
             // 
@@ -120,16 +211,7 @@ namespace Projeto_DA.Views
             this.tb_Valoroferta.Name = "tb_Valoroferta";
             this.tb_Valoroferta.Size = new System.Drawing.Size(340, 22);
             this.tb_Valoroferta.TabIndex = 43;
-            // 
-            // valorOfertaLabel
-            // 
-            valorOfertaLabel.AutoSize = true;
-            valorOfertaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            valorOfertaLabel.Location = new System.Drawing.Point(89, 316);
-            valorOfertaLabel.Name = "valorOfertaLabel";
-            valorOfertaLabel.Size = new System.Drawing.Size(89, 17);
-            valorOfertaLabel.TabIndex = 42;
-            valorOfertaLabel.Text = "Valor Oferta:";
+            this.tb_Valoroferta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Valoroferta_KeyPress);
             // 
             // tb_telemovel
             // 
@@ -138,16 +220,7 @@ namespace Projeto_DA.Views
             this.tb_telemovel.Name = "tb_telemovel";
             this.tb_telemovel.Size = new System.Drawing.Size(340, 22);
             this.tb_telemovel.TabIndex = 41;
-            // 
-            // telemovelLabel1
-            // 
-            telemovelLabel1.AutoSize = true;
-            telemovelLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            telemovelLabel1.Location = new System.Drawing.Point(89, 282);
-            telemovelLabel1.Name = "telemovelLabel1";
-            telemovelLabel1.Size = new System.Drawing.Size(77, 17);
-            telemovelLabel1.TabIndex = 40;
-            telemovelLabel1.Text = "Telemovel:";
+            this.tb_telemovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telemovel_KeyPress);
             // 
             // tb_telefone
             // 
@@ -156,16 +229,7 @@ namespace Projeto_DA.Views
             this.tb_telefone.Name = "tb_telefone";
             this.tb_telefone.Size = new System.Drawing.Size(340, 22);
             this.tb_telefone.TabIndex = 39;
-            // 
-            // telefoneLabel1
-            // 
-            telefoneLabel1.AutoSize = true;
-            telefoneLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            telefoneLabel1.Location = new System.Drawing.Point(88, 248);
-            telefoneLabel1.Name = "telefoneLabel1";
-            telefoneLabel1.Size = new System.Drawing.Size(68, 17);
-            telefoneLabel1.TabIndex = 38;
-            telefoneLabel1.Text = "Telefone:";
+            this.tb_telefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_telefone_KeyPress);
             // 
             // tb_Nrcartao
             // 
@@ -174,16 +238,7 @@ namespace Projeto_DA.Views
             this.tb_Nrcartao.Name = "tb_Nrcartao";
             this.tb_Nrcartao.Size = new System.Drawing.Size(340, 22);
             this.tb_Nrcartao.TabIndex = 37;
-            // 
-            // nrCartaoLabel
-            // 
-            nrCartaoLabel.AutoSize = true;
-            nrCartaoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            nrCartaoLabel.Location = new System.Drawing.Point(88, 214);
-            nrCartaoLabel.Name = "nrCartaoLabel";
-            nrCartaoLabel.Size = new System.Drawing.Size(73, 17);
-            nrCartaoLabel.TabIndex = 36;
-            nrCartaoLabel.Text = "Nr Cartao:";
+            this.tb_Nrcartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Nrcartao_KeyPress);
             // 
             // tb_morada
             // 
@@ -192,26 +247,6 @@ namespace Projeto_DA.Views
             this.tb_morada.Name = "tb_morada";
             this.tb_morada.Size = new System.Drawing.Size(340, 22);
             this.tb_morada.TabIndex = 33;
-            // 
-            // nomeLabel1
-            // 
-            nomeLabel1.AutoSize = true;
-            nomeLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            nomeLabel1.Location = new System.Drawing.Point(89, 44);
-            nomeLabel1.Name = "nomeLabel1";
-            nomeLabel1.Size = new System.Drawing.Size(49, 17);
-            nomeLabel1.TabIndex = 34;
-            nomeLabel1.Text = "Nome:";
-            // 
-            // moradaLabel1
-            // 
-            moradaLabel1.AutoSize = true;
-            moradaLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            moradaLabel1.Location = new System.Drawing.Point(88, 146);
-            moradaLabel1.Name = "moradaLabel1";
-            moradaLabel1.Size = new System.Drawing.Size(60, 17);
-            moradaLabel1.TabIndex = 32;
-            moradaLabel1.Text = "Morada:";
             // 
             // tb_nome
             // 
@@ -228,16 +263,6 @@ namespace Projeto_DA.Views
             this.tb_mail.Name = "tb_mail";
             this.tb_mail.Size = new System.Drawing.Size(340, 22);
             this.tb_mail.TabIndex = 31;
-            // 
-            // mailLabel1
-            // 
-            mailLabel1.AutoSize = true;
-            mailLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            mailLabel1.Location = new System.Drawing.Point(89, 112);
-            mailLabel1.Name = "mailLabel1";
-            mailLabel1.Size = new System.Drawing.Size(37, 17);
-            mailLabel1.TabIndex = 30;
-            mailLabel1.Text = "Mail:";
             // 
             // btn_Apagar
             // 
@@ -271,16 +296,6 @@ namespace Projeto_DA.Views
             this.btn_Alterar.UseVisualStyleBackColor = true;
             this.btn_Alterar.Click += new System.EventHandler(this.btn_Alterar_Click);
             // 
-            // localidadeLabel1
-            // 
-            localidadeLabel1.AutoSize = true;
-            localidadeLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            localidadeLabel1.Location = new System.Drawing.Point(88, 78);
-            localidadeLabel1.Name = "localidadeLabel1";
-            localidadeLabel1.Size = new System.Drawing.Size(81, 17);
-            localidadeLabel1.TabIndex = 28;
-            localidadeLabel1.Text = "Localidade:";
-            // 
             // tb_codpostal
             // 
             this.tb_codpostal.Location = new System.Drawing.Point(273, 180);
@@ -289,18 +304,9 @@ namespace Projeto_DA.Views
             this.tb_codpostal.Size = new System.Drawing.Size(340, 22);
             this.tb_codpostal.TabIndex = 25;
             // 
-            // codPostalLabel1
-            // 
-            codPostalLabel1.AutoSize = true;
-            codPostalLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            codPostalLabel1.Location = new System.Drawing.Point(88, 185);
-            codPostalLabel1.Name = "codPostalLabel1";
-            codPostalLabel1.Size = new System.Drawing.Size(80, 17);
-            codPostalLabel1.TabIndex = 24;
-            codPostalLabel1.Text = "Cod Postal:";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonClean);
             this.groupBox2.Controls.Add(codPostalLabel1);
             this.groupBox2.Controls.Add(this.tb_codpostal);
             this.groupBox2.Controls.Add(localidadeLabel1);
@@ -328,6 +334,17 @@ namespace Projeto_DA.Views
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados";
             // 
+            // buttonClean
+            // 
+            this.buttonClean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonClean.Location = new System.Drawing.Point(714, 331);
+            this.buttonClean.Name = "buttonClean";
+            this.buttonClean.Size = new System.Drawing.Size(104, 23);
+            this.buttonClean.TabIndex = 44;
+            this.buttonClean.Text = "Limpar Dados";
+            this.buttonClean.UseVisualStyleBackColor = true;
+            this.buttonClean.Click += new System.EventHandler(this.buttonClean_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,7 +358,7 @@ namespace Projeto_DA.Views
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Alterar);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.Text = "Gestão de clientes e filhos";
             this.Load += new System.EventHandler(this.Clientes_Load);
@@ -369,5 +386,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.Button btn_Alterar;
         private System.Windows.Forms.TextBox tb_codpostal;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonClean;
     }
 }

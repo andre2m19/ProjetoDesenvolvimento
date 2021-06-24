@@ -31,11 +31,9 @@ namespace Projeto_DA.Views
         {
             booKidscontainer4 = new BooKidsContainer4();
             listBoxAnimadores.DataSource = booKidscontainer4.Pessoas.ToList<Pessoa>();
-
             nomeTextBox.ReadOnly = true;
             mailTextBox.ReadOnly = true;
             localidadeTextBox.ReadOnly = true;
-
         }
 
         private void LerDados()
@@ -46,31 +44,49 @@ namespace Projeto_DA.Views
 
         private void btn_Registar_Click(object sender, EventArgs e)
         {
-            Pessoa pessoaSelecionada = (Pessoa)listBoxAnimadores.SelectedItem;
+            if (especialidadeTextBox.Text == "")
+            {
+                MessageBox.Show("Introduza os dados todos!");
+            }
+            else
+            {
 
-            int idPessoa = pessoaSelecionada.IdPessoa;
-            string nome = pessoaSelecionada.Nome;
-            string morada = pessoaSelecionada.Morada;
-            string localidade = pessoaSelecionada.Localidade;
-            string codpostal = pessoaSelecionada.CodPostal;
-            string mail = pessoaSelecionada.Mail;
-            string especialidade = especialidadeTextBox.Text;
-            string telefone = pessoaSelecionada.Telefone.ToString();
-            string telemovel = pessoaSelecionada.Telemovel.ToString();
+                Pessoa pessoaSelecionada = (Pessoa)listBoxAnimadores.SelectedItem;
 
-            Animador animador = new Animador(idPessoa, nome, morada, localidade, codpostal, telefone, telefone, mail, especialidade);
+                int idPessoa = pessoaSelecionada.IdPessoa;
+                string nome = pessoaSelecionada.Nome;
+                string morada = pessoaSelecionada.Morada;
+                string localidade = pessoaSelecionada.Localidade;
+                string codpostal = pessoaSelecionada.CodPostal;
+                string mail = pessoaSelecionada.Mail;
+                string especialidade = especialidadeTextBox.Text;
+                string telefone = pessoaSelecionada.Telefone;
+                string telemovel = pessoaSelecionada.Telemovel;
 
-            booKidscontainer4.Pessoas.Add(animador);
 
-            booKidscontainer4.SaveChanges();
+                Animador animador = new Animador(idPessoa, nome, morada, localidade, codpostal, telefone, telefone, mail, especialidade);
 
-            listBoxAnimadores.DataSource = null;
-            listBoxAnimadores.DataSource = booKidscontainer4.Pessoas.ToList<Pessoa>();
+                booKidscontainer4.Pessoas.Add(animador);
+
+                booKidscontainer4.SaveChanges();
+
+                listBoxAnimadores.DataSource = null;
+                listBoxAnimadores.DataSource = booKidscontainer4.Pessoas.ToList<Pessoa>();
+            }
         }
 
         private void btn_Alterar_Click(object sender, EventArgs e)
         {
+            if (listBoxAnimadores.SelectedIndex == -1)
+                return;
 
+            Animador animadorSelecionado = (Animador)listBoxAnimadores.SelectedItem;
+
+            animadorSelecionado.Especialidade = especialidadeTextBox.Text;
+
+            booKidscontainer4.SaveChanges();
+
+            MessageBox.Show("Dados Alterados!");
         }
 
         private void btn_Apagar_Click(object sender, EventArgs e)
@@ -98,7 +114,6 @@ namespace Projeto_DA.Views
             nomeTextBox.Text = pessoaSelecionada.Nome;
             mailTextBox.Text = pessoaSelecionada.Mail;
             localidadeTextBox.Text = pessoaSelecionada.Localidade;
-            textBoxtelefone.Text = pessoaSelecionada.Telefone;
   
         }
     }

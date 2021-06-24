@@ -20,6 +20,8 @@ namespace Projeto_DA.Base_de_dados
             NrCartao = nrcartao;
             ValorOferta = valoroferta;
         }
+
+
         public override string ToString()
         {
             return ("Nome: " + Nome + " Morada: " + Morada + " Localidade: " + Localidade + " CodPostal: " + CodPostal + " Telefone: " + Telefone + " Telemovel: " + Telemovel + " Email: " + Mail + " NrCartao " + NrCartao + " ValorOferta: " + ValorOferta);

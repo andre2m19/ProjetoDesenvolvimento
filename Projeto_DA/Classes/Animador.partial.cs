@@ -15,13 +15,15 @@ namespace Projeto_DA.Base_de_dados
             Morada = morada;
             Localidade = localidade;
             CodPostal = codpostal;
+            Telefone = telefone;
+            Telemovel = telemovel;
             Mail = mail;
             Especialidade = especialidade;
         }
 
         public override string ToString()
         {
-            return "Sr/Sra" + Nome + " reside em " + Morada + ". Contacte em " + Mail;
+            return "Sr/Sra " + Nome + " reside em " + Morada + ". Contacte em " + Mail;
         }
     }
 }
