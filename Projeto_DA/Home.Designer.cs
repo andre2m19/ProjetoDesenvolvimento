@@ -31,7 +31,6 @@ namespace Projeto_DA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_animadores = new System.Windows.Forms.Button();
             this.btn_escolas = new System.Windows.Forms.Button();
@@ -44,9 +43,10 @@ namespace Projeto_DA
             this.btn_hideMenu = new System.Windows.Forms.Button();
             this.btn_showMenu = new System.Windows.Forms.Button();
             this.panel_forms = new System.Windows.Forms.Panel();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -66,17 +66,6 @@ namespace Projeto_DA
             this.panelMenu.TabIndex = 12;
             this.panelMenu.Visible = false;
             // 
-            // pb_logo
-            // 
-            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
-            this.pb_logo.Location = new System.Drawing.Point(78, 183);
-            this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(264, 199);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_logo.TabIndex = 14;
-            this.pb_logo.TabStop = false;
-            this.pb_logo.Visible = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
@@ -88,6 +77,7 @@ namespace Projeto_DA
             // btn_animadores
             // 
             this.btn_animadores.BackColor = System.Drawing.Color.Black;
+            this.btn_animadores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_animadores.FlatAppearance.BorderSize = 0;
             this.btn_animadores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_animadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -106,6 +96,7 @@ namespace Projeto_DA
             // btn_escolas
             // 
             this.btn_escolas.BackColor = System.Drawing.Color.Black;
+            this.btn_escolas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_escolas.FlatAppearance.BorderSize = 0;
             this.btn_escolas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_escolas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -124,6 +115,7 @@ namespace Projeto_DA
             // btn_compras
             // 
             this.btn_compras.BackColor = System.Drawing.Color.Black;
+            this.btn_compras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_compras.FlatAppearance.BorderSize = 0;
             this.btn_compras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_compras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -142,6 +134,7 @@ namespace Projeto_DA
             // btn_eventos
             // 
             this.btn_eventos.BackColor = System.Drawing.Color.Black;
+            this.btn_eventos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_eventos.FlatAppearance.BorderSize = 0;
             this.btn_eventos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_eventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -160,6 +153,7 @@ namespace Projeto_DA
             // btn_vendas
             // 
             this.btn_vendas.BackColor = System.Drawing.Color.Black;
+            this.btn_vendas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_vendas.FlatAppearance.BorderSize = 0;
             this.btn_vendas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_vendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -178,6 +172,7 @@ namespace Projeto_DA
             // btn_clientes
             // 
             this.btn_clientes.BackColor = System.Drawing.Color.Black;
+            this.btn_clientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clientes.FlatAppearance.BorderSize = 0;
             this.btn_clientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -263,6 +258,17 @@ namespace Projeto_DA
             this.panel_forms.Size = new System.Drawing.Size(1521, 971);
             this.panel_forms.TabIndex = 14;
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
+            this.pb_logo.Location = new System.Drawing.Point(78, 183);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(264, 199);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_logo.TabIndex = 14;
+            this.pb_logo.TabStop = false;
+            this.pb_logo.Visible = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -279,8 +285,8 @@ namespace Projeto_DA
             this.Text = " BooKids - Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,9 +302,9 @@ namespace Projeto_DA
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Button btn_showMenu;
         internal System.Windows.Forms.Button btn_hideMenu;
-        private System.Windows.Forms.PictureBox pb_logo;
         internal System.Windows.Forms.Button btn_sair;
         private System.Windows.Forms.Panel panel_forms;
         internal System.Windows.Forms.Button btn_clientes;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }
