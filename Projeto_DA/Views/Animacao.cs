@@ -53,8 +53,8 @@ namespace Projeto_DA.Views
             string morada = pessoaSelecionada.Morada;
             string localidade = pessoaSelecionada.Localidade;
             string codpostal = pessoaSelecionada.CodPostal;
-            int telefone = pessoaSelecionada.Telefone;
-            int telemovel = pessoaSelecionada.Telemovel;
+            string telefone = pessoaSelecionada.Telefone;
+            string telemovel = pessoaSelecionada.Telemovel;
             string mail = pessoaSelecionada.Mail;
             string especialidade = especialidadeTextBox.Text;
 

@@ -34,6 +34,7 @@ namespace Projeto_DA.Views
             System.Windows.Forms.Label produtosCodProdutoLabel;
             System.Windows.Forms.Label utilizouCartaoLabel;
             System.Windows.Forms.Label clientes_IdPessoaLabel;
+            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compras));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_registar_produtos_vendidos = new System.Windows.Forms.ListBox();
@@ -47,11 +48,13 @@ namespace Projeto_DA.Views
             this.btn_Consultar = new System.Windows.Forms.Button();
             this.btn_Apagar = new System.Windows.Forms.Button();
             this.btn_Alterar = new System.Windows.Forms.Button();
+            this.tb_quantidade = new System.Windows.Forms.TextBox();
             dataLabel = new System.Windows.Forms.Label();
             idClienteLabel = new System.Windows.Forms.Label();
             produtosCodProdutoLabel = new System.Windows.Forms.Label();
             utilizouCartaoLabel = new System.Windows.Forms.Label();
             clientes_IdPessoaLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -121,9 +124,12 @@ namespace Projeto_DA.Views
             this.lb_registar_produtos_vendidos.Name = "lb_registar_produtos_vendidos";
             this.lb_registar_produtos_vendidos.Size = new System.Drawing.Size(973, 284);
             this.lb_registar_produtos_vendidos.TabIndex = 47;
+            this.lb_registar_produtos_vendidos.SelectedIndexChanged += new System.EventHandler(this.lb_registar_produtos_vendidos_SelectedIndexChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tb_quantidade);
+            this.groupBox2.Controls.Add(label1);
             this.groupBox2.Controls.Add(this.tb_clientesIdPessoa);
             this.groupBox2.Controls.Add(clientes_IdPessoaLabel);
             this.groupBox2.Controls.Add(dataLabel);
@@ -225,6 +231,23 @@ namespace Projeto_DA.Views
             this.btn_Alterar.TabIndex = 12;
             this.btn_Alterar.Text = "Alterar";
             this.btn_Alterar.UseVisualStyleBackColor = true;
+            this.btn_Alterar.Click += new System.EventHandler(this.btn_Alterar_Click);
+            // 
+            // tb_quantidade
+            // 
+            this.tb_quantidade.Location = new System.Drawing.Point(192, 228);
+            this.tb_quantidade.Name = "tb_quantidade";
+            this.tb_quantidade.Size = new System.Drawing.Size(100, 26);
+            this.tb_quantidade.TabIndex = 43;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(20, 234);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(92, 20);
+            label1.TabIndex = 42;
+            label1.Text = "Quantidade";
             // 
             // Compras
             // 
@@ -260,5 +283,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.Button btn_Alterar;
         private System.Windows.Forms.ListBox lb_registar_produtos_vendidos;
         private System.Windows.Forms.TextBox tb_clientesIdPessoa;
+        private System.Windows.Forms.TextBox tb_quantidade;
     }
 }

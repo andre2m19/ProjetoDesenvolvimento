@@ -8,7 +8,7 @@ namespace Projeto_DA.Base_de_dados
 {
     public partial class Cliente
     {
-        public Cliente(string nome, string morada, string localidade, string codPostal, int telefone, int telemovel, string mail, int nr_cartao, int valor_oferta)
+        public Cliente(string nome, string morada, string localidade, string codPostal, string telefone, string telemovel, string mail, string nrcartao, string valoroferta)
         {
             Nome = nome;
             Morada = morada;
@@ -17,6 +17,12 @@ namespace Projeto_DA.Base_de_dados
             Telefone = telefone;
             Telemovel = telemovel;
             Mail = mail;
+            NrCartao = nrcartao;
+            ValorOferta = valoroferta;
+        }
+        public override string ToString()
+        {
+            return ("Nome: " + Nome + " Morada: " + Morada + " Localidade: " + Localidade + " CodPostal: " + CodPostal + " Telefone: " + Telefone + " Telemovel: " + Telemovel + " Email: " + Mail + " NrCartao " + NrCartao + " ValorOferta: " + ValorOferta);
         }
     }
 }

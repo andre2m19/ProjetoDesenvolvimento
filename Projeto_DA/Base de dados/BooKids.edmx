@@ -130,8 +130,8 @@
     <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Localidade" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CodPostal" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Telefone" Type="int" Nullable="false" />
-    <Property Name="Telemovel" Type="int" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telemovel" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Mail" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Inscricaos">
@@ -213,8 +213,8 @@
     <Key>
       <PropertyRef Name="IdPessoa" />
     </Key>
-    <Property Name="ValorOferta" Type="int" Nullable="false" />
-    <Property Name="NrCartao" Type="int" Nullable="false" />
+    <Property Name="ValorOferta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NrCartao" Type="nvarchar(max)" Nullable="false" />
     <Property Name="IdPessoa" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="EscolaFilho">
@@ -513,8 +513,8 @@
           <NavigationProperty Name="DetalheCompras" Relationship="BooKids.CompraDetalheCompra" FromRole="Compra" ToRole="DetalheCompra" />
         </EntityType>
         <EntityType Name="Cliente" BaseType="BooKids.Pessoa">
-          <Property Name="ValorOferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
-          <Property Name="NrCartao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="ValorOferta" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="NrCartao" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <NavigationProperty Name="Compras" Relationship="BooKids.ClienteCompra" FromRole="Cliente" ToRole="Compra" />
           <NavigationProperty Name="Filhos" Relationship="BooKids.ClienteFilho" FromRole="Cliente" ToRole="Filho" />
         </EntityType>
@@ -527,8 +527,8 @@
           <Property Name="Morada" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Localidade" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="CodPostal" Type="String" Nullable="false" />
-          <Property Name="Telefone" Type="Int32" Nullable="false" />
-          <Property Name="Telemovel" Type="Int32" Nullable="false" />
+          <Property Name="Telefone" Type="String" Nullable="false" />
+          <Property Name="Telemovel" Type="String" Nullable="false" />
           <Property Name="Mail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Inscricao">
