@@ -139,7 +139,7 @@
       <PropertyRef Name="FilhosIdPessoa" />
       <PropertyRef Name="EventosNrEvento" />
     </Key>
-    <Property Name="Confirmada" Type="nvarchar(max)" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Confirmada" Type="bit" Nullable="false" />
     <Property Name="FilhosIdPessoa" Type="int" Nullable="false" />
     <Property Name="EventosNrEvento" Type="int" Nullable="false" />
     <Property Name="Eventos_NrEvento" Type="int" Nullable="false" />
@@ -536,7 +536,7 @@
             <PropertyRef Name="FilhosIdPessoa" />
             <PropertyRef Name="EventosNrEvento" />
           </Key>
-          <Property Name="Confirmada" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Confirmada" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="FilhosIdPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="EventosNrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <NavigationProperty Name="Eventos" Relationship="BooKids.EventoInscricao" FromRole="Inscricao" ToRole="Evento" />

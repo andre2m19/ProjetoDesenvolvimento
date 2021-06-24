@@ -139,7 +139,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
-            this.btn_Alterar.Location = new System.Drawing.Point(408, 432);
+            this.btn_Alterar.Location = new System.Drawing.Point(794, 479);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
             this.btn_Alterar.Size = new System.Drawing.Size(139, 46);
@@ -150,7 +150,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
-            this.btn_Apagar.Location = new System.Drawing.Point(595, 432);
+            this.btn_Apagar.Location = new System.Drawing.Point(794, 581);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
             this.btn_Apagar.Size = new System.Drawing.Size(139, 46);
@@ -161,7 +161,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
-            this.btn_Registar.Location = new System.Drawing.Point(204, 432);
+            this.btn_Registar.Location = new System.Drawing.Point(794, 388);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
             this.btn_Registar.Size = new System.Drawing.Size(139, 46);
@@ -305,7 +305,7 @@ namespace Projeto_DA.Views
             this.codPostalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "CodPostal", true));
             this.codPostalTextBox.Location = new System.Drawing.Point(174, 66);
             this.codPostalTextBox.Name = "codPostalTextBox";
-            this.codPostalTextBox.Size = new System.Drawing.Size(189, 22);
+            this.codPostalTextBox.Size = new System.Drawing.Size(268, 22);
             this.codPostalTextBox.TabIndex = 15;
             this.codPostalTextBox.TextChanged += new System.EventHandler(this.codPostalTextBox_TextChanged);
             // 
@@ -314,7 +314,7 @@ namespace Projeto_DA.Views
             this.localidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "Localidade", true));
             this.localidadeTextBox.Location = new System.Drawing.Point(175, 109);
             this.localidadeTextBox.Name = "localidadeTextBox";
-            this.localidadeTextBox.Size = new System.Drawing.Size(189, 22);
+            this.localidadeTextBox.Size = new System.Drawing.Size(268, 22);
             this.localidadeTextBox.TabIndex = 19;
             this.localidadeTextBox.TextChanged += new System.EventHandler(this.localidadeTextBox_TextChanged);
             // 
@@ -323,7 +323,7 @@ namespace Projeto_DA.Views
             this.mailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "Mail", true));
             this.mailTextBox.Location = new System.Drawing.Point(175, 147);
             this.mailTextBox.Name = "mailTextBox";
-            this.mailTextBox.Size = new System.Drawing.Size(189, 22);
+            this.mailTextBox.Size = new System.Drawing.Size(268, 22);
             this.mailTextBox.TabIndex = 21;
             this.mailTextBox.TextChanged += new System.EventHandler(this.mailTextBox_TextChanged);
             // 
@@ -332,7 +332,7 @@ namespace Projeto_DA.Views
             this.moradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "Morada", true));
             this.moradaTextBox.Location = new System.Drawing.Point(175, 190);
             this.moradaTextBox.Name = "moradaTextBox";
-            this.moradaTextBox.Size = new System.Drawing.Size(189, 22);
+            this.moradaTextBox.Size = new System.Drawing.Size(268, 22);
             this.moradaTextBox.TabIndex = 23;
             this.moradaTextBox.TextChanged += new System.EventHandler(this.moradaTextBox_TextChanged);
             // 
@@ -341,7 +341,7 @@ namespace Projeto_DA.Views
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(175, 35);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(189, 22);
+            this.nomeTextBox.Size = new System.Drawing.Size(268, 22);
             this.nomeTextBox.TabIndex = 25;
             this.nomeTextBox.TextChanged += new System.EventHandler(this.nomeTextBox_TextChanged);
             // 
@@ -350,7 +350,7 @@ namespace Projeto_DA.Views
             this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "Telefone", true));
             this.telefoneTextBox.Location = new System.Drawing.Point(174, 226);
             this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(189, 22);
+            this.telefoneTextBox.Size = new System.Drawing.Size(268, 22);
             this.telefoneTextBox.TabIndex = 27;
             this.telefoneTextBox.TextChanged += new System.EventHandler(this.telefoneTextBox_TextChanged);
             // 
@@ -369,9 +369,9 @@ namespace Projeto_DA.Views
             this.groupBox1.Controls.Add(this.localidadeTextBox);
             this.groupBox1.Controls.Add(this.mailTextBox);
             this.groupBox1.Controls.Add(moradaLabel);
-            this.groupBox1.Location = new System.Drawing.Point(24, 57);
+            this.groupBox1.Location = new System.Drawing.Point(35, 363);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 283);
+            this.groupBox1.Size = new System.Drawing.Size(543, 283);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Escola:";
@@ -389,9 +389,9 @@ namespace Projeto_DA.Views
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBoxEscolas);
-            this.groupBox2.Location = new System.Drawing.Point(451, 57);
+            this.groupBox2.Location = new System.Drawing.Point(35, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(476, 283);
+            this.groupBox2.Size = new System.Drawing.Size(1110, 283);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Escolas:";
@@ -400,9 +400,9 @@ namespace Projeto_DA.Views
             // 
             this.listBoxEscolas.FormattingEnabled = true;
             this.listBoxEscolas.ItemHeight = 16;
-            this.listBoxEscolas.Location = new System.Drawing.Point(34, 29);
+            this.listBoxEscolas.Location = new System.Drawing.Point(213, 32);
             this.listBoxEscolas.Name = "listBoxEscolas";
-            this.listBoxEscolas.Size = new System.Drawing.Size(436, 228);
+            this.listBoxEscolas.Size = new System.Drawing.Size(639, 228);
             this.listBoxEscolas.TabIndex = 0;
             this.listBoxEscolas.SelectedIndexChanged += new System.EventHandler(this.listBoxEscolas_SelectedIndexChanged);
             // 
@@ -413,11 +413,11 @@ namespace Projeto_DA.Views
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1157, 713);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.escolaBindingNavigator);
             this.Controls.Add(this.btn_Alterar);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Registar);
-            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Escolas";

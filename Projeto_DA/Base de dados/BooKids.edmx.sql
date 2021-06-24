@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/24/2021 01:34:25
+-- Date Created: 06/24/2021 15:01:56
 -- Generated from EDMX file: C:\Users\andre\OneDrive\Documentos\GitHub\ProjetoDesenvolvimento\Projeto_DA\Base de dados\BooKids.edmx
 -- --------------------------------------------------
 
@@ -166,7 +166,7 @@ GO
 
 -- Creating table 'Inscricaos'
 CREATE TABLE [dbo].[Inscricaos] (
-    [Confirmada] nvarchar(max)  NOT NULL,
+    [Confirmada] bit  NOT NULL,
     [FilhosIdPessoa] int  NOT NULL,
     [EventosNrEvento] int  NOT NULL,
     [Eventos_NrEvento] int  NOT NULL,

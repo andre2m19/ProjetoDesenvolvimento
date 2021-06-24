@@ -31,6 +31,7 @@ namespace Projeto_DA.Views
         {
             booKidscontainer4 = new BooKidsContainer4();
             listBoxAnimadores.DataSource = booKidscontainer4.Pessoas.ToList<Pessoa>();
+            listBox1.DataSource = booKidscontainer4.Pessoas.ToList<Pessoa>();
 
             nomeTextBox.ReadOnly = true;
             mailTextBox.ReadOnly = true;
@@ -55,7 +56,6 @@ namespace Projeto_DA.Views
             string codpostal = pessoaSelecionada.CodPostal;
             string mail = pessoaSelecionada.Mail;
             string especialidade = especialidadeTextBox.Text;
-
             string telefone = pessoaSelecionada.Telefone.ToString();
             string telemovel = pessoaSelecionada.Telemovel.ToString();
 
@@ -92,6 +92,7 @@ namespace Projeto_DA.Views
         private void listBoxAnimadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pessoa pessoaSelecionada = (Pessoa)listBoxAnimadores.SelectedItem;
+            Animador animadorSelecionado = (Animador)listBox1.SelectedItem;
 
             if (listBoxAnimadores.SelectedIndex == -1)
                 return;
@@ -100,6 +101,7 @@ namespace Projeto_DA.Views
             mailTextBox.Text = pessoaSelecionada.Mail;
             localidadeTextBox.Text = pessoaSelecionada.Localidade;
             textBoxtelefone.Text = pessoaSelecionada.Telefone;
+            especialidadeTextBox.Text = animadorSelecionado.Especialidade;
         }
     }
 }
