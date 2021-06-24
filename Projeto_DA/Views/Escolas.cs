@@ -44,12 +44,14 @@ namespace Projeto_DA.Views
             escolaSelecionada.Nome = nomeTextBox.Text;
             escolaSelecionada.Telefone = telefoneTextBox.Text;
         }
+
+        // ---- Popular a listbox
         private void LerDados()
         {
             listBoxEscolas.DataSource = booKidscontainer4.Escolas.ToList<Escola>();
         }
 
-
+        // ----- Registar a escola na base de dados
         private void btn_Registar_Click(object sender, EventArgs e)
         {
 
@@ -86,6 +88,8 @@ namespace Projeto_DA.Views
             }
         }
 
+        // ---- Apagar a escola da base dados
+
         private void btn_Apagar_Click(object sender, EventArgs e)
         {
             if (listBoxEscolas.SelectedIndex == -1)
@@ -104,6 +108,7 @@ namespace Projeto_DA.Views
             MessageBox.Show("Dados Apagados!");
         }
 
+        // ---- Alterar a escola na base de dados
         private void btn_Alterar_Click(object sender, EventArgs e)
         {
             if (listBoxEscolas.SelectedIndex == -1)
@@ -124,7 +129,7 @@ namespace Projeto_DA.Views
         }
 
         
-
+        //--- popular as textbox´s
         private void listBoxEscolas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBoxEscolas.SelectedIndex == -1)
@@ -141,6 +146,7 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = escolaSelecionada.Telefone;
         }
 
+        // --- Limpar as textbox´s
         private void buttonClean_Click(object sender, EventArgs e)
         {
             nomeTextBox.Text = "";
@@ -152,7 +158,7 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = "";
         }
 
-
+        // --- filtragem de letras
         private void telefoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

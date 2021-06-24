@@ -68,28 +68,28 @@ namespace Projeto_DA.Views
             // 
             this.tb_Stock_Existente.Location = new System.Drawing.Point(218, 163);
             this.tb_Stock_Existente.Name = "tb_Stock_Existente";
-            this.tb_Stock_Existente.Size = new System.Drawing.Size(100, 22);
+            this.tb_Stock_Existente.Size = new System.Drawing.Size(194, 22);
             this.tb_Stock_Existente.TabIndex = 22;
             // 
             // tb_CTP
             // 
             this.tb_CTP.Location = new System.Drawing.Point(218, 123);
             this.tb_CTP.Name = "tb_CTP";
-            this.tb_CTP.Size = new System.Drawing.Size(100, 22);
+            this.tb_CTP.Size = new System.Drawing.Size(194, 22);
             this.tb_CTP.TabIndex = 21;
             // 
             // tb_Preco
             // 
             this.tb_Preco.Location = new System.Drawing.Point(218, 83);
             this.tb_Preco.Name = "tb_Preco";
-            this.tb_Preco.Size = new System.Drawing.Size(100, 22);
+            this.tb_Preco.Size = new System.Drawing.Size(194, 22);
             this.tb_Preco.TabIndex = 20;
             // 
             // tb_designacao
             // 
             this.tb_designacao.Location = new System.Drawing.Point(218, 51);
             this.tb_designacao.Name = "tb_designacao";
-            this.tb_designacao.Size = new System.Drawing.Size(100, 22);
+            this.tb_designacao.Size = new System.Drawing.Size(194, 22);
             this.tb_designacao.TabIndex = 19;
             // 
             // label4
@@ -142,10 +142,6 @@ namespace Projeto_DA.Views
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_Registar);
-            this.groupBox2.Controls.Add(this.btn_Consultar);
-            this.groupBox2.Controls.Add(this.btn_Apagar);
-            this.groupBox2.Controls.Add(this.btn_Alterar);
             this.groupBox2.Controls.Add(this.tb_CTP);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
@@ -158,18 +154,18 @@ namespace Projeto_DA.Views
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(804, 288);
+            this.groupBox2.Size = new System.Drawing.Size(507, 288);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Dados:";
             // 
             // btn_Registar
             // 
             this.btn_Registar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Registar.Location = new System.Drawing.Point(244, 236);
+            this.btn_Registar.Location = new System.Drawing.Point(686, 329);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
-            this.btn_Registar.Size = new System.Drawing.Size(94, 23);
+            this.btn_Registar.Size = new System.Drawing.Size(128, 59);
             this.btn_Registar.TabIndex = 23;
             this.btn_Registar.Text = "Registar";
             this.btn_Registar.UseVisualStyleBackColor = true;
@@ -178,10 +174,10 @@ namespace Projeto_DA.Views
             // btn_Consultar
             // 
             this.btn_Consultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Consultar.Location = new System.Drawing.Point(542, 236);
+            this.btn_Consultar.Location = new System.Drawing.Point(686, 408);
             this.btn_Consultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Consultar.Name = "btn_Consultar";
-            this.btn_Consultar.Size = new System.Drawing.Size(94, 23);
+            this.btn_Consultar.Size = new System.Drawing.Size(128, 59);
             this.btn_Consultar.TabIndex = 26;
             this.btn_Consultar.Text = "Consultar";
             this.btn_Consultar.UseVisualStyleBackColor = true;
@@ -189,10 +185,10 @@ namespace Projeto_DA.Views
             // btn_Apagar
             // 
             this.btn_Apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Apagar.Location = new System.Drawing.Point(343, 236);
+            this.btn_Apagar.Location = new System.Drawing.Point(686, 566);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
-            this.btn_Apagar.Size = new System.Drawing.Size(94, 23);
+            this.btn_Apagar.Size = new System.Drawing.Size(128, 59);
             this.btn_Apagar.TabIndex = 24;
             this.btn_Apagar.Text = "Apagar";
             this.btn_Apagar.UseVisualStyleBackColor = true;
@@ -201,10 +197,10 @@ namespace Projeto_DA.Views
             // btn_Alterar
             // 
             this.btn_Alterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Alterar.Location = new System.Drawing.Point(443, 236);
+            this.btn_Alterar.Location = new System.Drawing.Point(686, 487);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
-            this.btn_Alterar.Size = new System.Drawing.Size(94, 23);
+            this.btn_Alterar.Size = new System.Drawing.Size(128, 59);
             this.btn_Alterar.TabIndex = 25;
             this.btn_Alterar.Text = "Alterar";
             this.btn_Alterar.UseVisualStyleBackColor = true;
@@ -217,7 +213,6 @@ namespace Projeto_DA.Views
             this.fichaDeInscriçãoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1157, 28);
             this.menuStrip1.TabIndex = 93;
             this.menuStrip1.Text = "menuStrip1";
@@ -254,8 +249,12 @@ namespace Projeto_DA.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 713);
+            this.Controls.Add(this.btn_Registar);
+            this.Controls.Add(this.btn_Consultar);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn_Alterar);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Produtos";

@@ -41,7 +41,6 @@ namespace Projeto_DA.Views
             this.label1 = new System.Windows.Forms.Label();
             this.animadorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -60,14 +59,18 @@ namespace Projeto_DA.Views
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBoxAnimadores = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listBoxPessoas = new System.Windows.Forms.ListBox();
+            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             especialidadeLabel = new System.Windows.Forms.Label();
             localidadeLabel = new System.Windows.Forms.Label();
             mailLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).BeginInit();
             this.animadorBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // especialidadeLabel
@@ -190,10 +193,6 @@ namespace Projeto_DA.Views
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // animadorBindingSource
-            // 
-            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
             // 
             // bindingNavigatorCountItem
             // 
@@ -325,22 +324,46 @@ namespace Projeto_DA.Views
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBoxAnimadores);
-            this.groupBox2.Location = new System.Drawing.Point(50, 89);
+            this.groupBox2.Location = new System.Drawing.Point(621, 85);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1095, 275);
+            this.groupBox2.Size = new System.Drawing.Size(514, 275);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Animadores";
+            this.groupBox2.Text = "Animadores:";
             // 
             // listBoxAnimadores
             // 
             this.listBoxAnimadores.FormattingEnabled = true;
             this.listBoxAnimadores.ItemHeight = 16;
-            this.listBoxAnimadores.Location = new System.Drawing.Point(169, 21);
+            this.listBoxAnimadores.Location = new System.Drawing.Point(18, 21);
             this.listBoxAnimadores.Name = "listBoxAnimadores";
-            this.listBoxAnimadores.Size = new System.Drawing.Size(781, 244);
+            this.listBoxAnimadores.Size = new System.Drawing.Size(481, 228);
             this.listBoxAnimadores.TabIndex = 0;
             this.listBoxAnimadores.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimadores_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listBoxPessoas);
+            this.groupBox3.Location = new System.Drawing.Point(50, 85);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(536, 275);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pessoas:";
+            // 
+            // listBoxPessoas
+            // 
+            this.listBoxPessoas.FormattingEnabled = true;
+            this.listBoxPessoas.ItemHeight = 16;
+            this.listBoxPessoas.Location = new System.Drawing.Point(20, 21);
+            this.listBoxPessoas.Name = "listBoxPessoas";
+            this.listBoxPessoas.Size = new System.Drawing.Size(495, 228);
+            this.listBoxPessoas.TabIndex = 0;
+            this.listBoxPessoas.SelectedIndexChanged += new System.EventHandler(this.listBoxPessoas_SelectedIndexChanged);
+            // 
+            // animadorBindingSource
+            // 
+            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
             // 
             // Animacao
             // 
@@ -348,6 +371,7 @@ namespace Projeto_DA.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1157, 713);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(especialidadeLabel);
             this.Controls.Add(this.especialidadeTextBox);
@@ -371,8 +395,9 @@ namespace Projeto_DA.Views
             ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).EndInit();
             this.animadorBindingNavigator.ResumeLayout(false);
             this.animadorBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +429,7 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBoxAnimadores;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListBox listBoxPessoas;
     }
 }

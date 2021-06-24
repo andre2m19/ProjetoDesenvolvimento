@@ -59,7 +59,7 @@ namespace Projeto_DA.Views
         // ------------- Função Ler dados da listbox Cliente -----
         private void LerDados()
         {
-            lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>(); ;
+            lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.OfType<Cliente>().ToList<Pessoa>();
 
         }
 

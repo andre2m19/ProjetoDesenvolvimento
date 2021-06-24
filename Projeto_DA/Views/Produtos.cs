@@ -18,6 +18,7 @@ namespace Projeto_DA.Views
         {
             InitializeComponent();
             booKidsContainer4 = new BooKidsContainer4();
+            lb_produtos.DataSource = booKidsContainer4.Pessoas.OfType<Cliente>().ToList<Cliente>();
         }
 
 
@@ -57,7 +58,5 @@ namespace Projeto_DA.Views
             
             MessageBox.Show("Cliente apagado com sucesso!");
         }
-
-        
     }
     }

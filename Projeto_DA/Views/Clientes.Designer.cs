@@ -337,9 +337,9 @@ namespace Projeto_DA.Views
             // buttonClean
             // 
             this.buttonClean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonClean.Location = new System.Drawing.Point(714, 331);
+            this.buttonClean.Location = new System.Drawing.Point(675, 331);
             this.buttonClean.Name = "buttonClean";
-            this.buttonClean.Size = new System.Drawing.Size(104, 23);
+            this.buttonClean.Size = new System.Drawing.Size(115, 23);
             this.buttonClean.TabIndex = 44;
             this.buttonClean.Text = "Limpar Dados";
             this.buttonClean.UseVisualStyleBackColor = true;

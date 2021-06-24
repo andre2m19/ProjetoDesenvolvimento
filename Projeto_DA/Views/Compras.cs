@@ -25,7 +25,7 @@ namespace Projeto_DA.Views
         }   
         private void LerDados()
         {
-            lb_registar_produtos_vendidos.DataSource = booKidsContainer4.Compras.ToList<Compra>(); 
+            listBoxClientes.DataSource = booKidsContainer4.Pessoas.OfType<Cliente>().ToList<Cliente>();
 
         }
         // ------------------- Registar Compra ----------------------------
@@ -121,13 +121,13 @@ namespace Projeto_DA.Views
         {
             Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
 
-            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+           // Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
 
             string idPessoa = pessoaSelecionada.IdPessoa.ToString();
-            string idCliente = clienteSelecionado.IdPessoa.ToString();
+           // string idCliente = clienteSelecionado.IdPessoa.ToString();
 
             tb_id.Text = idPessoa;
-            tb_clientesIdPessoa.Text = idCliente;
+           // tb_clientesIdPessoa.Text = idCliente;
            
         }
     }
