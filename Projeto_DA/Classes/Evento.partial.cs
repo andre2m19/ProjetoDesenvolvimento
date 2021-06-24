@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Projeto_DA.Base_de_dados
 {
     public partial class Evento
@@ -15,7 +17,14 @@ namespace Projeto_DA.Base_de_dados
             DataHora = dataHora;
             IdadeSuperior = idadeSuperior;
             IdadeInferior = idadeInferior;
+            LimitePartcipacoes = limiteParticipacoes;
             TipoEvento = tipoEvento;
+          
+
+        }
+        public override string ToString()
+        {
+            return ("Descicao--->" + Descricao + "Local--->" + Local + "Data Hora--->" + DataHora + "Idade Superior--->" + IdadeSuperior + "Idade Inferior--->" + IdadeInferior + "Limite Participacoes--->" + LimitePartcipacoes + "Tipo Evento--->" + TipoEvento);
         }
     }
 }

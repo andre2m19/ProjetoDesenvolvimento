@@ -36,7 +36,7 @@ namespace Projeto_DA.Views
             int IdadeSuperior = int.Parse(tb_Idade_Superior.Text);
             int IdadeInferior = int.Parse(tb_Idade_Inferior.Text);
             string TipoEvento = tb_tipo_evento.Text;
-
+            
             Evento evento = new Evento(Descricao, Local, DataHora, LimiteParticipacoes, IdadeSuperior, IdadeInferior, TipoEvento);
 
             if (IdadeInferior < 18 && IdadeSuperior >= 18)

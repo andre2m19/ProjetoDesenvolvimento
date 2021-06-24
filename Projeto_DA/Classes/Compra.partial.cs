@@ -20,9 +20,10 @@ namespace Projeto_DA.Base_de_dados
         
         }
       
-      // public override string ToString()
-       // {
-        //    return ("Data: " + Data + " UtilizouCartao: " + UtilizouCartao + " IdCliente: " + IdCliente + " ProdutosCodProduto: " + ProdutosCodProduto + " clientesIdPessoa: " + ClientesIdPessoa);
-       // }
+       public override string ToString()
+        {
+            return ("Data: " + Data + " UtilizouCartao: " + UtilizouCartao + " IdCliente: " + IdCliente + " ProdutosCodProduto: " + ProdutosCodProduto);
+        }
+
     }
 }

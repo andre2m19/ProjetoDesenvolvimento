@@ -45,13 +45,16 @@ namespace Projeto_DA.Views
                 string Valor_oferta = tb_Valoroferta.Text;
 
 
-                Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
-                booKidsContainer4.Pessoas.Add(cliente);
+            Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
+            booKidsContainer4.Pessoas.Add(cliente);
 
-                booKidsContainer4.SaveChanges();
+            booKidsContainer4.SaveChanges();
 
-                MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
+            MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
+            lb_registar_clientes.DataSource = null;
+            lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
             }
+
         }
         // ------------- Função Ler dados da listbox Cliente -----
         private void LerDados()

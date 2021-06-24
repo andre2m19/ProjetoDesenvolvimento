@@ -106,7 +106,8 @@ namespace Projeto_DA.Views
             compraSelecionada.IdCliente = int.Parse(tb_id.Text);
             compraSelecionada.ProdutosCodProduto = int.Parse(tb_produtosCodProduto.Text);
             compraSelecionada.UtilizouCartao = tb_utilizouCartao.Text;
-           // compraSelecionada.ClientesIdPessoa = int.Parse(tb_clientesIdPessoa.Text);
+
+            //compraSelecionada.ClientesIdPessoa = int.Parse(tb_clientesIdPessoa.Text);
 
             lb_registar_produtos_vendidos.DataSource = null;
             lb_registar_produtos_vendidos.DataSource = booKidsContainer4.Compras.ToList<Compra>();
