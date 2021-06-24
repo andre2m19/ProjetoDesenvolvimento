@@ -45,7 +45,8 @@ namespace Projeto_DA.Views
             booKidsContainer4.SaveChanges();
 
             MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
-
+            lb_registar_clientes.DataSource = null;
+            lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
         }
         // ------------- Função Ler dados da listbox Cliente -----
         private void LerDados()

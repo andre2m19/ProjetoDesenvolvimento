@@ -16,13 +16,13 @@ namespace Projeto_DA.Base_de_dados
             UtilizouCartao = utilizouCartao;
             IdCliente = idCliente;
             ProdutosCodProduto = produtosCodProduto;
-            ClientesIdPessoa= clientesIdPessoa;
+            //ClientesIdPessoa= clientesIdPessoa;
         
         }
       
        public override string ToString()
         {
-            return ("Data: " + Data + " UtilizouCartao: " + UtilizouCartao + " IdCliente: " + IdCliente + " ProdutosCodProduto: " + ProdutosCodProduto + " clientesIdPessoa: " + ClientesIdPessoa);
+            return ("Data: " + Data + " UtilizouCartao: " + UtilizouCartao + " IdCliente: " + IdCliente + " ProdutosCodProduto: " + ProdutosCodProduto);
         }
     }
 }
