@@ -61,8 +61,17 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
-          
-        }
+
+
+            // ------- Botões Selecionados ------------
+            btn_clientes.BackColor = Color.LightBlue;
+            btn_animadores.BackColor = Color.Black;
+            btn_compras.BackColor = Color.Black;
+            btn_escolas.BackColor = Color.Black;
+            btn_eventos.BackColor = Color.Black;
+            btn_vendas.BackColor = Color.Black;
+       
+        }        
 
         private void btn_vendas_Click(object sender, EventArgs e)
         {
@@ -70,6 +79,15 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
+
+
+            // ------- Botões Selecionados ------------
+            btn_clientes.BackColor = Color.Black;
+            btn_animadores.BackColor = Color.Black;
+            btn_compras.BackColor = Color.Black;
+            btn_escolas.BackColor = Color.Black;
+            btn_eventos.BackColor = Color.Black;
+            btn_vendas.BackColor = Color.LightBlue;
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
@@ -78,6 +96,14 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
+
+            // ------- Botões Selecionados ------------
+            btn_vendas.BackColor = Color.Black;
+            btn_clientes.BackColor = Color.Black;
+            btn_animadores.BackColor = Color.Black;
+            btn_compras.BackColor = Color.Black;
+            btn_escolas.BackColor = Color.Black;
+            btn_eventos.BackColor = Color.LightBlue;
         }
 
         private void btn_compras_Click(object sender, EventArgs e)
@@ -86,6 +112,15 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
+
+
+            // ------- Botões Selecionados ------------
+            btn_vendas.BackColor = Color.Black;
+            btn_clientes.BackColor = Color.Black;
+            btn_animadores.BackColor = Color.Black;
+            btn_compras.BackColor = Color.LightBlue;
+            btn_escolas.BackColor = Color.Black;
+            btn_eventos.BackColor = Color.Black;
         }
 
         private void btn_escolas_Click(object sender, EventArgs e)
@@ -94,6 +129,15 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
+
+
+            // ------- Botões Selecionados ------------
+            btn_vendas.BackColor = Color.Black;
+            btn_clientes.BackColor = Color.Black;
+            btn_animadores.BackColor = Color.Black;
+            btn_compras.BackColor = Color.Black;
+            btn_escolas.BackColor = Color.LightBlue;
+            btn_eventos.BackColor = Color.Black;
         }
 
         private void btn_animadores_Click(object sender, EventArgs e)
@@ -102,6 +146,15 @@ namespace Projeto_DA
             janela.TopLevel = false;
             janela.Visible = true;
             panel_forms.Controls.Add(janela);
+
+
+            // ------- Botões Selecionados ------------
+            btn_vendas.BackColor = Color.Black;
+            btn_clientes.BackColor = Color.Black;
+            btn_animadores.BackColor = Color.LightBlue;
+            btn_compras.BackColor = Color.Black;
+            btn_escolas.BackColor = Color.Black;
+            btn_eventos.BackColor = Color.Black;
         }
 
         

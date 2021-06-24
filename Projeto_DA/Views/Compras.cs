@@ -74,7 +74,7 @@ namespace Projeto_DA.Views
 
             LerDados();
 
-            tb_clientesIdPessoa.ReadOnly = true;
+            //tb_clientesIdPessoa.ReadOnly = true;
             tb_id.ReadOnly = true;
         }
         private void lb_registar_produtos_vendidos_SelectedIndexChanged(object sender, EventArgs e)

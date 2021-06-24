@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto_DA.Base_de_dados;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto_DA.Views
 {
     public partial class Produtos : Form
     {
-       private BooKidsContainer4 booKidsContainer4;
+        private BooKidsContainer4 booKidsContainer4;
         public Produtos()
         {
             InitializeComponent();
@@ -36,13 +37,8 @@ namespace Projeto_DA.Views
             lb_produtos.DataSource = null;
             lb_produtos.DataSource = booKidsContainer4.Produtoes.ToList<Produto>();
 
-
-
             booKidsContainer4.SaveChanges();
-            //if(Preco != short && CodTipoProduto && int)
-            {
 
-            }
         }
 
         // ------------------- Apgar Produto --------------------------
@@ -55,8 +51,38 @@ namespace Projeto_DA.Views
             booKidsContainer4.SaveChanges();
             lb_produtos.DataSource = null;
             lb_produtos.DataSource = booKidsContainer4.Produtoes.ToList<Produto>();
-            
+
             MessageBox.Show("Cliente apagado com sucesso!");
         }
+
+        // ------------------- Recibo de Venda -----------------------------
+        private void formatoTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lb_produtos.SelectedIndex == -1)
+                return;
+            //criação do ficheiro txt
+            saveFileDialogTexto.FileName = "Recibo de Venda" + ".txt";
+            if (saveFileDialogTexto.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+            StreamWriter ficheiro = new StreamWriter(saveFileDialogTexto.FileName, false);
+
+
+            foreach (Produto c in booKidsContainer4.Produtoes)
+            {
+                ficheiro.WriteLine("\t\t\t\t Recibo de Venda - Produto");
+                ficheiro.WriteLine("\nDesignação: ________________________________ " + c.Designacao);
+                ficheiro.WriteLine("\nPreço: _____€" + c.Preco);
+                ficheiro.WriteLine("\nStock Existente: __________" + c.StockExistente);
+                foreach (Produto b in booKidsContainer4.Produtoes)
+                {
+                    ficheiro.WriteLine(b.ToString());
+                }
+
+            }
+            ficheiro.Close();
+            MessageBox.Show("O ficheiro foi guardado com o nome: " + saveFileDialogTexto.FileName);
+        }
     }
-    }
+}

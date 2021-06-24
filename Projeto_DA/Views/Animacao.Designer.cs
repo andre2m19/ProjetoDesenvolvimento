@@ -39,19 +39,7 @@ namespace Projeto_DA.Views
             this.btn_Apagar = new System.Windows.Forms.Button();
             this.btn_Alterar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.animadorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.animadorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.especialidadeTextBox = new System.Windows.Forms.TextBox();
             this.localidadeTextBox = new System.Windows.Forms.TextBox();
             this.mailTextBox = new System.Windows.Forms.TextBox();
@@ -61,60 +49,57 @@ namespace Projeto_DA.Views
             this.listBoxAnimadores = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listBoxPessoas = new System.Windows.Forms.ListBox();
-            this.animadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             especialidadeLabel = new System.Windows.Forms.Label();
             localidadeLabel = new System.Windows.Forms.Label();
             mailLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).BeginInit();
-            this.animadorBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // especialidadeLabel
             // 
             especialidadeLabel.AutoSize = true;
-            especialidadeLabel.Location = new System.Drawing.Point(146, 623);
+            especialidadeLabel.Location = new System.Drawing.Point(163, 713);
             especialidadeLabel.Name = "especialidadeLabel";
-            especialidadeLabel.Size = new System.Drawing.Size(100, 17);
+            especialidadeLabel.Size = new System.Drawing.Size(112, 20);
             especialidadeLabel.TabIndex = 8;
             especialidadeLabel.Text = "Especialidade:";
             // 
             // localidadeLabel
             // 
             localidadeLabel.AutoSize = true;
-            localidadeLabel.Location = new System.Drawing.Point(146, 523);
+            localidadeLabel.Location = new System.Drawing.Point(163, 588);
             localidadeLabel.Name = "localidadeLabel";
-            localidadeLabel.Size = new System.Drawing.Size(81, 17);
+            localidadeLabel.Size = new System.Drawing.Size(90, 20);
             localidadeLabel.TabIndex = 12;
             localidadeLabel.Text = "Localidade:";
             // 
             // mailLabel
             // 
             mailLabel.AutoSize = true;
-            mailLabel.Location = new System.Drawing.Point(146, 573);
+            mailLabel.Location = new System.Drawing.Point(163, 650);
             mailLabel.Name = "mailLabel";
-            mailLabel.Size = new System.Drawing.Size(37, 17);
+            mailLabel.Size = new System.Drawing.Size(41, 20);
             mailLabel.TabIndex = 14;
             mailLabel.Text = "Mail:";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(146, 473);
+            nomeLabel.Location = new System.Drawing.Point(163, 525);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(49, 17);
+            nomeLabel.Size = new System.Drawing.Size(55, 20);
             nomeLabel.TabIndex = 18;
             nomeLabel.Text = "Nome:";
             // 
             // btn_Registar
             // 
-            this.btn_Registar.Location = new System.Drawing.Point(822, 444);
+            this.btn_Registar.Location = new System.Drawing.Point(924, 489);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
-            this.btn_Registar.Size = new System.Drawing.Size(139, 46);
+            this.btn_Registar.Size = new System.Drawing.Size(156, 58);
             this.btn_Registar.TabIndex = 1;
             this.btn_Registar.Text = "Registar";
             this.btn_Registar.UseVisualStyleBackColor = true;
@@ -122,10 +107,10 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
-            this.btn_Apagar.Location = new System.Drawing.Point(822, 608);
+            this.btn_Apagar.Location = new System.Drawing.Point(924, 694);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
-            this.btn_Apagar.Size = new System.Drawing.Size(139, 46);
+            this.btn_Apagar.Size = new System.Drawing.Size(156, 58);
             this.btn_Apagar.TabIndex = 2;
             this.btn_Apagar.Text = "Apagar";
             this.btn_Apagar.UseVisualStyleBackColor = true;
@@ -133,10 +118,10 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
-            this.btn_Alterar.Location = new System.Drawing.Point(822, 526);
+            this.btn_Alterar.Location = new System.Drawing.Point(924, 592);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
-            this.btn_Alterar.Size = new System.Drawing.Size(139, 46);
+            this.btn_Alterar.Size = new System.Drawing.Size(156, 58);
             this.btn_Alterar.TabIndex = 3;
             this.btn_Alterar.Text = "Alterar";
             this.btn_Alterar.UseVisualStyleBackColor = true;
@@ -147,176 +132,60 @@ namespace Projeto_DA.Views
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(11, 394);
+            this.label1.Location = new System.Drawing.Point(11, 426);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 18);
+            this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Voltar";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // animadorBindingNavigator
+            // animadorBindingSource
             // 
-            this.animadorBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.animadorBindingNavigator.BindingSource = this.animadorBindingSource;
-            this.animadorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.animadorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.animadorBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.animadorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.animadorBindingNavigatorSaveItem});
-            this.animadorBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.animadorBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.animadorBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.animadorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.animadorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.animadorBindingNavigator.Name = "animadorBindingNavigator";
-            this.animadorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.animadorBindingNavigator.Size = new System.Drawing.Size(1157, 27);
-            this.animadorBindingNavigator.TabIndex = 6;
-            this.animadorBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição actual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Mover seguinte";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // animadorBindingNavigatorSaveItem
-            // 
-            this.animadorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.animadorBindingNavigatorSaveItem.Enabled = false;
-            this.animadorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("animadorBindingNavigatorSaveItem.Image")));
-            this.animadorBindingNavigatorSaveItem.Name = "animadorBindingNavigatorSaveItem";
-            this.animadorBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.animadorBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
             // 
             // especialidadeTextBox
             // 
             this.especialidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animadorBindingSource, "Especialidade", true));
-            this.especialidadeTextBox.Location = new System.Drawing.Point(289, 618);
+            this.especialidadeTextBox.Location = new System.Drawing.Point(324, 706);
+            this.especialidadeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.especialidadeTextBox.Name = "especialidadeTextBox";
-            this.especialidadeTextBox.Size = new System.Drawing.Size(230, 22);
+            this.especialidadeTextBox.Size = new System.Drawing.Size(258, 26);
             this.especialidadeTextBox.TabIndex = 9;
             // 
             // localidadeTextBox
             // 
             this.localidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animadorBindingSource, "Localidade", true));
-            this.localidadeTextBox.Location = new System.Drawing.Point(289, 518);
+            this.localidadeTextBox.Location = new System.Drawing.Point(324, 582);
+            this.localidadeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.localidadeTextBox.Name = "localidadeTextBox";
-            this.localidadeTextBox.Size = new System.Drawing.Size(230, 22);
+            this.localidadeTextBox.Size = new System.Drawing.Size(258, 26);
             this.localidadeTextBox.TabIndex = 13;
             // 
             // mailTextBox
             // 
             this.mailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animadorBindingSource, "Mail", true));
-            this.mailTextBox.Location = new System.Drawing.Point(289, 568);
+            this.mailTextBox.Location = new System.Drawing.Point(324, 644);
+            this.mailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mailTextBox.Name = "mailTextBox";
-            this.mailTextBox.Size = new System.Drawing.Size(230, 22);
+            this.mailTextBox.Size = new System.Drawing.Size(258, 26);
             this.mailTextBox.TabIndex = 15;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animadorBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(289, 468);
+            this.nomeTextBox.Location = new System.Drawing.Point(324, 519);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(230, 22);
+            this.nomeTextBox.Size = new System.Drawing.Size(258, 26);
             this.nomeTextBox.TabIndex = 19;
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(50, 414);
+            this.groupBox1.Location = new System.Drawing.Point(55, 452);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(536, 275);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(603, 344);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Animador:";
@@ -324,53 +193,57 @@ namespace Projeto_DA.Views
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBoxAnimadores);
-            this.groupBox2.Location = new System.Drawing.Point(621, 85);
+            this.groupBox2.Location = new System.Drawing.Point(699, 46);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(514, 275);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(578, 344);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Animadores:";
             // 
             // listBoxAnimadores
             // 
+            this.listBoxAnimadores.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.listBoxAnimadores.FormattingEnabled = true;
-            this.listBoxAnimadores.ItemHeight = 16;
-            this.listBoxAnimadores.Location = new System.Drawing.Point(18, 21);
+            this.listBoxAnimadores.ItemHeight = 20;
+            this.listBoxAnimadores.Location = new System.Drawing.Point(20, 26);
+            this.listBoxAnimadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxAnimadores.Name = "listBoxAnimadores";
-            this.listBoxAnimadores.Size = new System.Drawing.Size(481, 228);
+            this.listBoxAnimadores.Size = new System.Drawing.Size(541, 284);
             this.listBoxAnimadores.TabIndex = 0;
             this.listBoxAnimadores.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimadores_SelectedIndexChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.listBoxPessoas);
-            this.groupBox3.Location = new System.Drawing.Point(50, 85);
+            this.groupBox3.Location = new System.Drawing.Point(56, 46);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(536, 275);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(603, 344);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pessoas:";
             // 
             // listBoxPessoas
             // 
+            this.listBoxPessoas.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listBoxPessoas.FormattingEnabled = true;
-            this.listBoxPessoas.ItemHeight = 16;
-            this.listBoxPessoas.Location = new System.Drawing.Point(20, 21);
+            this.listBoxPessoas.ItemHeight = 20;
+            this.listBoxPessoas.Location = new System.Drawing.Point(22, 26);
+            this.listBoxPessoas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxPessoas.Name = "listBoxPessoas";
-            this.listBoxPessoas.Size = new System.Drawing.Size(495, 228);
+            this.listBoxPessoas.Size = new System.Drawing.Size(556, 284);
             this.listBoxPessoas.TabIndex = 0;
             this.listBoxPessoas.SelectedIndexChanged += new System.EventHandler(this.listBoxPessoas_SelectedIndexChanged);
             // 
-            // animadorBindingSource
-            // 
-            this.animadorBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Animador);
-            // 
             // Animacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1157, 713);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1302, 891);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(especialidadeLabel);
@@ -381,23 +254,19 @@ namespace Projeto_DA.Views
             this.Controls.Add(this.mailTextBox);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(this.animadorBindingNavigator);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Alterar);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Registar);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Animacao";
             this.Text = " Gestão de Animadores ";
             this.Load += new System.EventHandler(this.Animacao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingNavigator)).EndInit();
-            this.animadorBindingNavigator.ResumeLayout(false);
-            this.animadorBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.animadorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,19 +278,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.Button btn_Alterar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource animadorBindingSource;
-        private System.Windows.Forms.BindingNavigator animadorBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton animadorBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox especialidadeTextBox;
         private System.Windows.Forms.TextBox localidadeTextBox;
         private System.Windows.Forms.TextBox mailTextBox;

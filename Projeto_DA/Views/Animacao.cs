@@ -81,7 +81,7 @@ namespace Projeto_DA.Views
             }
         }
 
-        // ---- Alterar o animador na base de dados
+        // ---- Alterar o animador na base de dados ---------------
         private void btn_Alterar_Click(object sender, EventArgs e)
         {
             if (listBoxAnimadores.SelectedIndex == -1)

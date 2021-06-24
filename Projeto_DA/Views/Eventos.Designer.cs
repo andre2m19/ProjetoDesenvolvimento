@@ -40,7 +40,6 @@ namespace Projeto_DA.Views
             this.btn_Apagar = new System.Windows.Forms.Button();
             this.tb_Idade_Superior = new System.Windows.Forms.TextBox();
             this.tb_tipo_evento = new System.Windows.Forms.TextBox();
-            this.colaboracoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_local = new System.Windows.Forms.TextBox();
             this.tb_limite_participacoes = new System.Windows.Forms.TextBox();
             this.tb_Idade_Inferior = new System.Windows.Forms.TextBox();
@@ -59,18 +58,19 @@ namespace Projeto_DA.Views
             this.tb_confirmada = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.saveFileDialogTexto = new System.Windows.Forms.SaveFileDialog();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.colaboracoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.participacoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inscricaosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             label11 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.colaboracoesBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bg_eventos.SuspendLayout();
             this.gb_dados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboracoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.participacoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscricaosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +122,7 @@ namespace Projeto_DA.Views
             // 
             // btn_alterar
             // 
-            this.btn_alterar.Location = new System.Drawing.Point(999, 598);
+            this.btn_alterar.Location = new System.Drawing.Point(920, 581);
             this.btn_alterar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_alterar.Name = "btn_alterar";
             this.btn_alterar.Size = new System.Drawing.Size(162, 98);
@@ -133,7 +133,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
-            this.btn_Apagar.Location = new System.Drawing.Point(699, 780);
+            this.btn_Apagar.Location = new System.Drawing.Point(920, 706);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Apagar.Name = "btn_Apagar";
             this.btn_Apagar.Size = new System.Drawing.Size(162, 98);
@@ -158,10 +158,6 @@ namespace Projeto_DA.Views
             this.tb_tipo_evento.Name = "tb_tipo_evento";
             this.tb_tipo_evento.Size = new System.Drawing.Size(220, 26);
             this.tb_tipo_evento.TabIndex = 86;
-            // 
-            // colaboracoesBindingSource
-            // 
-            this.colaboracoesBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Colaboracao);
             // 
             // tb_local
             // 
@@ -228,6 +224,7 @@ namespace Projeto_DA.Views
             // 
             // lb_registar_eventos
             // 
+            this.lb_registar_eventos.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lb_registar_eventos.FormattingEnabled = true;
             this.lb_registar_eventos.ItemHeight = 20;
             this.lb_registar_eventos.Location = new System.Drawing.Point(57, 36);
@@ -238,7 +235,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
-            this.btn_Registar.Location = new System.Drawing.Point(699, 424);
+            this.btn_Registar.Location = new System.Drawing.Point(920, 454);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Registar.Name = "btn_Registar";
             this.btn_Registar.Size = new System.Drawing.Size(162, 98);
@@ -256,7 +253,7 @@ namespace Projeto_DA.Views
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1276, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1328, 33);
             this.menuStrip1.TabIndex = 92;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -266,7 +263,7 @@ namespace Projeto_DA.Views
             this.formatoTextoToolStripMenuItem,
             this.formatoPDFToolStripMenuItem});
             this.formatosToolStripMenuItem.Name = "formatosToolStripMenuItem";
-            this.formatosToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
+            this.formatosToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.formatosToolStripMenuItem.Text = "Ficheiros";
             // 
             // formatoTextoToolStripMenuItem
@@ -340,14 +337,6 @@ namespace Projeto_DA.Views
             this.label4.TabIndex = 96;
             this.label4.Text = "Confirmada";
             // 
-            // participacoesBindingSource
-            // 
-            this.participacoesBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Participacao);
-            // 
-            // inscricaosBindingSource
-            // 
-            this.inscricaosBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Inscricao);
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -358,12 +347,25 @@ namespace Projeto_DA.Views
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // colaboracoesBindingSource
+            // 
+            this.colaboracoesBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Colaboracao);
+            // 
+            // participacoesBindingSource
+            // 
+            this.participacoesBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Participacao);
+            // 
+            // inscricaosBindingSource
+            // 
+            this.inscricaosBindingSource.DataSource = typeof(Projeto_DA.Base_de_dados.Inscricao);
+            // 
             // Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1302, 891);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1354, 891);
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Registar);
@@ -375,12 +377,12 @@ namespace Projeto_DA.Views
             this.Name = "Eventos";
             this.Text = " Gestão de Eventos";
             this.Load += new System.EventHandler(this.Eventos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.colaboracoesBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.bg_eventos.ResumeLayout(false);
             this.gb_dados.ResumeLayout(false);
             this.gb_dados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboracoesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.participacoesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscricaosBindingSource)).EndInit();
             this.ResumeLayout(false);

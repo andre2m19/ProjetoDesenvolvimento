@@ -48,8 +48,7 @@ namespace Projeto_DA.Views
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formatoTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formatoPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fichaDeInscriçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialogTexto = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -57,6 +56,7 @@ namespace Projeto_DA.Views
             // 
             // lb_produtos
             // 
+            this.lb_produtos.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lb_produtos.FormattingEnabled = true;
             this.lb_produtos.ItemHeight = 20;
             this.lb_produtos.Location = new System.Drawing.Point(27, 38);
@@ -70,9 +70,7 @@ namespace Projeto_DA.Views
             this.tb_Stock_Existente.Location = new System.Drawing.Point(245, 204);
             this.tb_Stock_Existente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Stock_Existente.Name = "tb_Stock_Existente";
-
-            this.tb_Stock_Existente.Size = new System.Drawing.Size(194, 22);
-
+            this.tb_Stock_Existente.Size = new System.Drawing.Size(194, 26);
             this.tb_Stock_Existente.TabIndex = 22;
             // 
             // tb_CTP
@@ -80,7 +78,7 @@ namespace Projeto_DA.Views
             this.tb_CTP.Location = new System.Drawing.Point(245, 154);
             this.tb_CTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_CTP.Name = "tb_CTP";
-            this.tb_CTP.Size = new System.Drawing.Size(194, 22);
+            this.tb_CTP.Size = new System.Drawing.Size(194, 26);
             this.tb_CTP.TabIndex = 21;
             // 
             // tb_Preco
@@ -88,8 +86,7 @@ namespace Projeto_DA.Views
             this.tb_Preco.Location = new System.Drawing.Point(245, 104);
             this.tb_Preco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Preco.Name = "tb_Preco";
-            this.tb_Preco.Size = new System.Drawing.Size(194, 22);
-
+            this.tb_Preco.Size = new System.Drawing.Size(194, 26);
             this.tb_Preco.TabIndex = 20;
             // 
             // tb_designacao
@@ -97,8 +94,7 @@ namespace Projeto_DA.Views
             this.tb_designacao.Location = new System.Drawing.Point(245, 64);
             this.tb_designacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_designacao.Name = "tb_designacao";
-            this.tb_designacao.Size = new System.Drawing.Size(194, 22);
-
+            this.tb_designacao.Size = new System.Drawing.Size(194, 26);
             this.tb_designacao.TabIndex = 19;
             // 
             // label4
@@ -171,8 +167,7 @@ namespace Projeto_DA.Views
             // btn_Registar
             // 
             this.btn_Registar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-
-            this.btn_Registar.Location = new System.Drawing.Point(686, 329);
+            this.btn_Registar.Location = new System.Drawing.Point(732, 403);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
             this.btn_Registar.Size = new System.Drawing.Size(128, 59);
@@ -184,7 +179,7 @@ namespace Projeto_DA.Views
             // btn_Consultar
             // 
             this.btn_Consultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Consultar.Location = new System.Drawing.Point(686, 408);
+            this.btn_Consultar.Location = new System.Drawing.Point(732, 482);
             this.btn_Consultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Consultar.Name = "btn_Consultar";
             this.btn_Consultar.Size = new System.Drawing.Size(128, 59);
@@ -195,7 +190,7 @@ namespace Projeto_DA.Views
             // btn_Apagar
             // 
             this.btn_Apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Apagar.Location = new System.Drawing.Point(686, 566);
+            this.btn_Apagar.Location = new System.Drawing.Point(732, 640);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
             this.btn_Apagar.Size = new System.Drawing.Size(128, 59);
@@ -207,8 +202,7 @@ namespace Projeto_DA.Views
             // btn_Alterar
             // 
             this.btn_Alterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-
-            this.btn_Alterar.Location = new System.Drawing.Point(686, 487);
+            this.btn_Alterar.Location = new System.Drawing.Point(732, 561);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
             this.btn_Alterar.Size = new System.Drawing.Size(128, 59);
@@ -221,45 +215,33 @@ namespace Projeto_DA.Views
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formatosToolStripMenuItem,
-            this.fichaDeInscriçãoToolStripMenuItem});
+            this.formatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1157, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1157, 33);
             this.menuStrip1.TabIndex = 93;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // formatosToolStripMenuItem
             // 
             this.formatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formatoTextoToolStripMenuItem,
-            this.formatoPDFToolStripMenuItem});
+            this.formatoTextoToolStripMenuItem});
             this.formatosToolStripMenuItem.Name = "formatosToolStripMenuItem";
-            this.formatosToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
+            this.formatosToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.formatosToolStripMenuItem.Text = "Ficheiros";
             // 
             // formatoTextoToolStripMenuItem
             // 
             this.formatoTextoToolStripMenuItem.Name = "formatoTextoToolStripMenuItem";
-            this.formatoTextoToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
+            this.formatoTextoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.formatoTextoToolStripMenuItem.Text = "Recibo de venda";
-            // 
-            // formatoPDFToolStripMenuItem
-            // 
-            this.formatoPDFToolStripMenuItem.Name = "formatoPDFToolStripMenuItem";
-            this.formatoPDFToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
-            this.formatoPDFToolStripMenuItem.Text = "Formato PDF";
-            // 
-            // fichaDeInscriçãoToolStripMenuItem
-            // 
-            this.fichaDeInscriçãoToolStripMenuItem.Name = "fichaDeInscriçãoToolStripMenuItem";
-            this.fichaDeInscriçãoToolStripMenuItem.Size = new System.Drawing.Size(159, 32);
-            this.fichaDeInscriçãoToolStripMenuItem.Text = "Recibo de venda";
+            this.formatoTextoToolStripMenuItem.Click += new System.EventHandler(this.formatoTextoToolStripMenuItem_Click);
             // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1157, 713);
             this.Controls.Add(this.btn_Registar);
             this.Controls.Add(this.btn_Consultar);
@@ -301,7 +283,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem formatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formatoTextoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formatoPDFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fichaDeInscriçãoToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogTexto;
     }
 }
