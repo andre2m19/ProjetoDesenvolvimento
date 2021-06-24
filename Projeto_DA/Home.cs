@@ -13,12 +13,7 @@ namespace Projeto_DA
 {
     public partial class Home : Form
     {
-        Views.Clientes Clientes;
-        Views.Animacao Animacao;
-        Views.Eventos Eventos;
-        Views.Escolas Escolas;
-        Views.Produtos Produtos;
-        Views.Compras Compras;
+
         public Home()
         {
             InitializeComponent();
