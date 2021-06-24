@@ -14,7 +14,7 @@ namespace Projeto_DA.Base_de_dados
     
     public partial class Inscricao
     {
-        public string Confirmada { get; set; }
+        public bool Confirmada { get; set; }
         public int FilhosIdPessoa { get; set; }
         public int EventosNrEvento { get; set; }
     

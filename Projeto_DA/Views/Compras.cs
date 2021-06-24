@@ -31,16 +31,21 @@ namespace Projeto_DA.Views
         // ------------------- Registar Compra ----------------------------
         private void btn_Registar_Click_1(object sender, EventArgs e)
         {
+            Cliente clienteSelecionado = (Cliente)lb_registar_produtos_vendidos.SelectedItem;
+            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
+
             DateTime Data = tp_data.Value;
-            int IdCliente = int.Parse(tb_id.Text);
-            int ProdutosCodProduto = int.Parse(tb_produtosCodProduto.Text);
+            int IdCliente = clienteSelecionado.IdPessoa;
+            int ProdutosCodProduto = pessoaSelecionada.IdPessoa;
             string UtilizouCartao = tb_utilizouCartao.Text;
             int clientesIdPessoa = int.Parse(tb_clientesIdPessoa.Text);
            
 
 
             Compra compra = new Compra(Data, UtilizouCartao, ProdutosCodProduto, clientesIdPessoa, IdCliente);
-      
+
+
+
 
             lb_registar_produtos_vendidos.DataSource = null;
             lb_registar_produtos_vendidos.DataSource = booKidsContainer4.Compras.ToList <Compra>();
