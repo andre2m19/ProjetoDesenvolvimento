@@ -35,7 +35,5 @@ namespace Projeto_DA.Base_de_dados
         public virtual DbSet<Participacao> Participacaos { get; set; }
         public virtual DbSet<Colaboracao> Colaboracaos { get; set; }
         public virtual DbSet<Escola> Escolas { get; set; }
-
-      
     }
 }

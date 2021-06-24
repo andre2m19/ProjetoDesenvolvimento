@@ -23,7 +23,6 @@ namespace Projeto_DA.Base_de_dados
     
         public string ValorOferta { get; set; }
         public string NrCartao { get; set; }
-      
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compras { get; set; }

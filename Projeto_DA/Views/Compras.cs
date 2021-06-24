@@ -35,11 +35,11 @@ namespace Projeto_DA.Views
             int IdCliente = int.Parse(tb_id.Text);
             int ProdutosCodProduto = int.Parse(tb_produtosCodProduto.Text);
             string UtilizouCartao = tb_utilizouCartao.Text;
-            int ClientesIdPessoa = int.Parse(tb_clientesIdPessoa.Text);
+            int clientesIdPessoa = int.Parse(tb_clientesIdPessoa.Text);
            
 
 
-            Compra compra = new Compra(Data, UtilizouCartao, ProdutosCodProduto, ClientesIdPessoa, IdCliente);
+            Compra compra = new Compra(Data, UtilizouCartao, ProdutosCodProduto, clientesIdPessoa, IdCliente);
       
 
             lb_registar_produtos_vendidos.DataSource = null;
@@ -69,7 +69,13 @@ namespace Projeto_DA.Views
         private void Compras_Load(object sender, EventArgs e)
         {
             booKidsContainer4 = new BooKidsContainer4();
+
+            listBoxClientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
+
             LerDados();
+
+            tb_clientesIdPessoa.ReadOnly = true;
+            tb_id.ReadOnly = true;
         }
         private void lb_registar_produtos_vendidos_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -110,6 +116,18 @@ namespace Projeto_DA.Views
             MessageBox.Show("Dados Alterados!");
         }
 
-        
+        private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
+
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+
+            string idPessoa = pessoaSelecionada.IdPessoa.ToString();
+            string idCliente = clienteSelecionado.IdPessoa.ToString();
+
+            tb_id.Text = idPessoa;
+            tb_clientesIdPessoa.Text = idCliente;
+           
+        }
     }
  }

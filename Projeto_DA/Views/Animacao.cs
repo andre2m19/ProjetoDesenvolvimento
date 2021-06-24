@@ -53,10 +53,11 @@ namespace Projeto_DA.Views
             string morada = pessoaSelecionada.Morada;
             string localidade = pessoaSelecionada.Localidade;
             string codpostal = pessoaSelecionada.CodPostal;
-            string telefone = pessoaSelecionada.Telefone;
-            string telemovel = pessoaSelecionada.Telemovel;
             string mail = pessoaSelecionada.Mail;
             string especialidade = especialidadeTextBox.Text;
+
+            string telefone = pessoaSelecionada.Telefone.ToString();
+            string telemovel = pessoaSelecionada.Telemovel.ToString();
 
             Animador animador = new Animador(idPessoa, nome, morada, localidade, codpostal, telefone, telefone, mail, especialidade);
 
@@ -98,6 +99,7 @@ namespace Projeto_DA.Views
             nomeTextBox.Text = pessoaSelecionada.Nome;
             mailTextBox.Text = pessoaSelecionada.Mail;
             localidadeTextBox.Text = pessoaSelecionada.Localidade;
+            textBoxtelefone.Text = pessoaSelecionada.Telefone;
         }
     }
 }

@@ -60,6 +60,7 @@ namespace Projeto_DA.Views
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBoxAnimadores = new System.Windows.Forms.ListBox();
+            this.textBoxtelefone = new System.Windows.Forms.TextBox();
             especialidadeLabel = new System.Windows.Forms.Label();
             localidadeLabel = new System.Windows.Forms.Label();
             mailLabel = new System.Windows.Forms.Label();
@@ -182,7 +183,7 @@ namespace Projeto_DA.Views
             this.animadorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.animadorBindingNavigator.Name = "animadorBindingNavigator";
             this.animadorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.animadorBindingNavigator.Size = new System.Drawing.Size(964, 27);
+            this.animadorBindingNavigator.Size = new System.Drawing.Size(1157, 27);
             this.animadorBindingNavigator.TabIndex = 6;
             this.animadorBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -342,12 +343,20 @@ namespace Projeto_DA.Views
             this.listBoxAnimadores.TabIndex = 0;
             this.listBoxAnimadores.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimadores_SelectedIndexChanged);
             // 
+            // textBoxtelefone
+            // 
+            this.textBoxtelefone.Location = new System.Drawing.Point(717, 379);
+            this.textBoxtelefone.Name = "textBoxtelefone";
+            this.textBoxtelefone.Size = new System.Drawing.Size(185, 22);
+            this.textBoxtelefone.TabIndex = 22;
+            // 
             // Animacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(964, 544);
+            this.ClientSize = new System.Drawing.Size(1157, 713);
+            this.Controls.Add(this.textBoxtelefone);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(especialidadeLabel);
             this.Controls.Add(this.especialidadeTextBox);
@@ -404,5 +413,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBoxAnimadores;
+        private System.Windows.Forms.TextBox textBoxtelefone;
     }
 }
