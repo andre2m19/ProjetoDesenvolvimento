@@ -51,7 +51,7 @@ namespace Projeto_DA.Views
             listBoxEscolas.DataSource = booKidscontainer4.Escolas.ToList<Escola>();
         }
 
-        // ----- Registar a escola na base de dados
+        // ------------ Registar a escola na base de dados ------------------
         private void btn_Registar_Click(object sender, EventArgs e)
         {
 
@@ -61,7 +61,7 @@ namespace Projeto_DA.Views
             }
             else { 
 
-
+            // Declarar variáveis
             string codPostal = codPostalTextBox.Text;
             string localidade = localidadeTextBox.Text;
             string mail = mailTextBox.Text;
@@ -69,14 +69,20 @@ namespace Projeto_DA.Views
             string nome = nomeTextBox.Text;
             string telefone = telefoneTextBox.Text;
 
+            // Instanciar a Escola
             Escola escola = new Escola(nome, morada, telefone, mail, codPostal, localidade);
-            booKidscontainer4.Escolas.Add(escola);
+            
+            // Adicionar Escola
+             booKidscontainer4.Escolas.Add(escola);
 
-            booKidscontainer4.SaveChanges();
+            // Salvar alterações
+             booKidscontainer4.SaveChanges();
 
+            // Atualiza a base de dados
             listBoxEscolas.DataSource = null;
             listBoxEscolas.DataSource = booKidscontainer4.Escolas.ToList<Escola>();
 
+            // Apaga as Textboxs quando se regista
             codPostalTextBox.Text = "";
             localidadeTextBox.Text = "";
             mailTextBox.Text = "";
@@ -88,7 +94,7 @@ namespace Projeto_DA.Views
             }
         }
 
-        // ---- Apagar a escola da base dados
+        // ---------- Apagar a escola da base dados -------------------
 
         private void btn_Apagar_Click(object sender, EventArgs e)
         {
@@ -97,11 +103,13 @@ namespace Projeto_DA.Views
 
             Escola escolaSelecionada = (Escola)listBoxEscolas.SelectedItem;
 
+           // Remove uma Escola
             booKidscontainer4.Escolas.Remove(escolaSelecionada);
 
-
+            // Salva as alterações
             booKidscontainer4.SaveChanges();
 
+            // Atualiza a base de dados
             listBoxEscolas.DataSource = null;
             listBoxEscolas.DataSource = booKidscontainer4.Escolas.ToList<Escola>();
 
@@ -123,13 +131,14 @@ namespace Projeto_DA.Views
             escolaSelecionada.Morada = moradaTextBox.Text;
             escolaSelecionada.Telefone = telefoneTextBox.Text;
 
+            // Guarda as alterações
             booKidscontainer4.SaveChanges();
 
             MessageBox.Show("Dados Alterados!");
         }
 
         
-        //--- popular as textbox´s
+        // --------------- Popular as textbox´s -----------------------------
         private void listBoxEscolas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBoxEscolas.SelectedIndex == -1)
@@ -146,7 +155,7 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = escolaSelecionada.Telefone;
         }
 
-        // --- Limpar as textbox´s
+        // ---------------- Limpar as textbox´s -------------------------
         private void buttonClean_Click(object sender, EventArgs e)
         {
             nomeTextBox.Text = "";
@@ -158,7 +167,7 @@ namespace Projeto_DA.Views
             telefoneTextBox.Text = "";
         }
 
-        // --- filtragem de letras
+        // ---------------- Filtragem de letras -----------------------------
         private void telefoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

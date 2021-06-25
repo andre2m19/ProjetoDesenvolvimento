@@ -96,6 +96,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
+            this.btn_Registar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registar.Location = new System.Drawing.Point(924, 489);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
@@ -107,6 +108,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
+            this.btn_Apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Apagar.Location = new System.Drawing.Point(924, 694);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
@@ -118,6 +120,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
+            this.btn_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Alterar.Location = new System.Drawing.Point(924, 592);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
@@ -137,7 +140,6 @@ namespace Projeto_DA.Views
             this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Voltar";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // animadorBindingSource
             // 
@@ -212,7 +214,6 @@ namespace Projeto_DA.Views
             this.listBoxAnimadores.Name = "listBoxAnimadores";
             this.listBoxAnimadores.Size = new System.Drawing.Size(541, 284);
             this.listBoxAnimadores.TabIndex = 0;
-            this.listBoxAnimadores.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimadores_SelectedIndexChanged);
             // 
             // groupBox3
             // 

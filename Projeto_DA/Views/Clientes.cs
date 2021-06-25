@@ -34,6 +34,7 @@ namespace Projeto_DA.Views
             }
             else
             {
+                // Declarar variáveis
                 string Nome = tb_nome.Text;
                 string Morada = tb_morada.Text;
                 string Localidade = tb_localidade.Text;
@@ -44,19 +45,26 @@ namespace Projeto_DA.Views
                 string Nr_cartao = tb_Nrcartao.Text;
                 string Valor_oferta = tb_Valoroferta.Text;
 
-
+            // Instanciar o Cliente
             Cliente cliente = new Cliente(Nome, Morada, Localidade, CodPostal, Telefone, Telemovel, Mail, Nr_cartao, Valor_oferta);
+           
+            // Adiciona o cliente
             booKidsContainer4.Pessoas.Add(cliente);
 
+            // Salva o cliente
             booKidsContainer4.SaveChanges();
 
+            // Mensagem de aviso
             MessageBox.Show("Cliente: " + tb_nome.Text + " adicinado com sucesso!");
+            
+            // Atualiza a base de dados
             lb_registar_clientes.DataSource = null;
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
             }
 
         }
-        // ------------- Função Ler dados da listbox Cliente -----
+
+        // ------------- Função Ler dados da listbox Cliente ---------
         private void LerDados()
         {
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.OfType<Cliente>().ToList<Pessoa>();
@@ -69,8 +77,14 @@ namespace Projeto_DA.Views
             if (lb_registar_clientes.SelectedIndex == 1)
                 return;
             Pessoa pessoaSelecionada = (Pessoa)lb_registar_clientes.SelectedItem;
+           
+            // Remove um Cliente
             booKidsContainer4.Pessoas.Remove(pessoaSelecionada);
+
+            // Salvar Alterações
             booKidsContainer4.SaveChanges();
+
+            // Atualiza a base de dados
             lb_registar_clientes.DataSource = null;
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
         }
@@ -78,6 +92,8 @@ namespace Projeto_DA.Views
         private void Clientes_Load(object sender, EventArgs e)
         {
             booKidsContainer4 = new BooKidsContainer4();
+
+            // Chama a função LerDados
             LerDados();
         }
 
@@ -119,15 +135,16 @@ namespace Projeto_DA.Views
             clienteSelecionado.NrCartao = tb_Nrcartao.Text;
             clienteSelecionado.ValorOferta = tb_Valoroferta.Text;
 
+            // Atualiza a base de dados
             lb_registar_clientes.DataSource = null;
             lb_registar_clientes.DataSource = booKidsContainer4.Pessoas.ToList<Pessoa>();
 
-
-
+            // Salva as alterações e mostra mensagem
             booKidsContainer4.SaveChanges();
             MessageBox.Show("Dados Alterados!");
         }
 
+        // -------------- Função que só aceita números no telefone -----------------
         private void tb_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -137,6 +154,7 @@ namespace Projeto_DA.Views
             }
         }
 
+        // -------------- Função que só aceita números no telemovel -----------------
         private void tb_telemovel_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -146,6 +164,7 @@ namespace Projeto_DA.Views
             }
         }
 
+        // -------------- Função que só aceita números no cartão  -----------------
         private void tb_Nrcartao_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -155,6 +174,7 @@ namespace Projeto_DA.Views
             }
         }
 
+        // -------------- Função que só aceita números no valor oferta  -----------------
         private void tb_Valoroferta_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -164,6 +184,7 @@ namespace Projeto_DA.Views
             }
         }
 
+        // ------------- Botão para limpar as textboxs --------------------
         private void buttonClean_Click(object sender, EventArgs e)
         {
             tb_codpostal.Text = "";

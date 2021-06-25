@@ -26,18 +26,25 @@ namespace Projeto_DA.Views
         // ------------------ Inserir Produto ---------------------------
         private void btn_Registar_Click(object sender, EventArgs e)
         {
+
+            // Declarar variáveis
             string Designacao = tb_designacao.Text;
             short Preco = short.Parse(tb_Preco.Text);
             int CodTipoProduto = int.Parse(tb_CTP.Text);
             string StockExistente = tb_Stock_Existente.Text;
 
 
+            // Instanciar o Produto
             Produto produtos = new Produto(Designacao, Preco, CodTipoProduto, StockExistente);
+            
+            // Adiciona um Produto
             booKidsContainer4.Produtoes.Add(produtos);
-            lb_produtos.DataSource = null;
-            lb_produtos.DataSource = booKidsContainer4.Produtoes.ToList<Produto>();
 
+            // Salvar Produto
             booKidsContainer4.SaveChanges();
+            // Atualiza a base de dados
+            lb_produtos.DataSource = null;
+            lb_produtos.DataSource = booKidsContainer4.Produtoes.ToList<Produto>();        
 
         }
 
@@ -83,6 +90,46 @@ namespace Projeto_DA.Views
             }
             ficheiro.Close();
             MessageBox.Show("O ficheiro foi guardado com o nome: " + saveFileDialogTexto.FileName);
+        }
+
+        private void Produtos_Load(object sender, EventArgs e)
+        {
+            booKidsContainer4 = new BooKidsContainer4();
+
+            // Chama a função LerDados
+            LerDados();
+        }
+
+
+        // -------------------- Função LerDados ----------------------------
+        private void LerDados()
+        {
+            lb_produtos.DataSource = booKidsContainer4.Produtoes.OfType<Produto>().ToList<Produto>();
+
+        }
+        // --------- Alterar o animador na base de dados --------------
+        private void btn_Alterar_Click(object sender, EventArgs e)
+        {
+            if (lb_produtos.SelectedIndex == -1)
+                return;
+
+            Produto produtoSelecionado = (Produto)lb_produtos.SelectedItem;
+
+
+            produtoSelecionado.Designacao = tb_designacao.Text;
+            produtoSelecionado.Preco = int.Parse(tb_Preco.Text);
+            produtoSelecionado.CodTipoProduto = int.Parse(tb_CTP.Text);
+            produtoSelecionado.StockExistente = tb_Stock_Existente.Text;
+
+
+            // Guarda as alterações
+            booKidsContainer4.SaveChanges();
+            MessageBox.Show("Dados Alterados!");
+
+            // Atualiza a base de dados
+            lb_produtos.DataSource = null;
+            lb_produtos.DataSource = booKidsContainer4.Produtoes.ToList<Produto>();
+
         }
     }
 }

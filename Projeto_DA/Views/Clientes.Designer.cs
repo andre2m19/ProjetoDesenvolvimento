@@ -40,7 +40,6 @@ namespace Projeto_DA.Views
             System.Windows.Forms.Label codPostalLabel1;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_registar_clientes = new System.Windows.Forms.ListBox();
-            this.btn_Consultar = new System.Windows.Forms.Button();
             this.btn_Registar = new System.Windows.Forms.Button();
             this.tb_Valoroferta = new System.Windows.Forms.TextBox();
             this.tb_telemovel = new System.Windows.Forms.TextBox();
@@ -182,19 +181,9 @@ namespace Projeto_DA.Views
             this.lb_registar_clientes.TabIndex = 47;
             this.lb_registar_clientes.SelectedIndexChanged += new System.EventHandler(this.lb_registar_clientes_SelectedIndexChanged);
             // 
-            // btn_Consultar
-            // 
-            this.btn_Consultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Consultar.Location = new System.Drawing.Point(1045, 791);
-            this.btn_Consultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Consultar.Name = "btn_Consultar";
-            this.btn_Consultar.Size = new System.Drawing.Size(179, 90);
-            this.btn_Consultar.TabIndex = 9;
-            this.btn_Consultar.Text = "Consultar";
-            this.btn_Consultar.UseVisualStyleBackColor = true;
-            // 
             // btn_Registar
             // 
+            this.btn_Registar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Registar.Location = new System.Drawing.Point(1045, 439);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -267,6 +256,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
+            this.btn_Apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Apagar.Location = new System.Drawing.Point(1045, 666);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -287,6 +277,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
+            this.btn_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Alterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Alterar.Location = new System.Drawing.Point(1045, 559);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -356,7 +347,6 @@ namespace Projeto_DA.Views
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Registar);
-            this.Controls.Add(this.btn_Consultar);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.btn_Alterar);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -374,7 +364,6 @@ namespace Projeto_DA.Views
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lb_registar_clientes;
-        private System.Windows.Forms.Button btn_Consultar;
         private System.Windows.Forms.Button btn_Registar;
         private System.Windows.Forms.TextBox tb_Valoroferta;
         private System.Windows.Forms.TextBox tb_telemovel;

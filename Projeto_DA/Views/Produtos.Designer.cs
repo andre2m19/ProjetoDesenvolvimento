@@ -42,7 +42,6 @@ namespace Projeto_DA.Views
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Registar = new System.Windows.Forms.Button();
-            this.btn_Consultar = new System.Windows.Forms.Button();
             this.btn_Apagar = new System.Windows.Forms.Button();
             this.btn_Alterar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -166,8 +165,9 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
+            this.btn_Registar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Registar.Location = new System.Drawing.Point(732, 403);
+            this.btn_Registar.Location = new System.Drawing.Point(732, 472);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";
             this.btn_Registar.Size = new System.Drawing.Size(128, 59);
@@ -176,19 +176,9 @@ namespace Projeto_DA.Views
             this.btn_Registar.UseVisualStyleBackColor = true;
             this.btn_Registar.Click += new System.EventHandler(this.btn_Registar_Click);
             // 
-            // btn_Consultar
-            // 
-            this.btn_Consultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Consultar.Location = new System.Drawing.Point(732, 482);
-            this.btn_Consultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Consultar.Name = "btn_Consultar";
-            this.btn_Consultar.Size = new System.Drawing.Size(128, 59);
-            this.btn_Consultar.TabIndex = 26;
-            this.btn_Consultar.Text = "Consultar";
-            this.btn_Consultar.UseVisualStyleBackColor = true;
-            // 
             // btn_Apagar
             // 
+            this.btn_Apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Apagar.Location = new System.Drawing.Point(732, 640);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -201,6 +191,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
+            this.btn_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Alterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Alterar.Location = new System.Drawing.Point(732, 561);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -209,6 +200,7 @@ namespace Projeto_DA.Views
             this.btn_Alterar.TabIndex = 25;
             this.btn_Alterar.Text = "Alterar";
             this.btn_Alterar.UseVisualStyleBackColor = true;
+            this.btn_Alterar.Click += new System.EventHandler(this.btn_Alterar_Click);
             // 
             // menuStrip1
             // 
@@ -233,7 +225,7 @@ namespace Projeto_DA.Views
             // formatoTextoToolStripMenuItem
             // 
             this.formatoTextoToolStripMenuItem.Name = "formatoTextoToolStripMenuItem";
-            this.formatoTextoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.formatoTextoToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.formatoTextoToolStripMenuItem.Text = "Recibo de venda";
             this.formatoTextoToolStripMenuItem.Click += new System.EventHandler(this.formatoTextoToolStripMenuItem_Click);
             // 
@@ -244,7 +236,6 @@ namespace Projeto_DA.Views
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1157, 713);
             this.Controls.Add(this.btn_Registar);
-            this.Controls.Add(this.btn_Consultar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_Apagar);
             this.Controls.Add(this.groupBox1);
@@ -254,6 +245,7 @@ namespace Projeto_DA.Views
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Produtos";
             this.Text = " Gestão de Vendas de Produtos";
+            this.Load += new System.EventHandler(this.Produtos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -277,7 +269,6 @@ namespace Projeto_DA.Views
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_Registar;
-        private System.Windows.Forms.Button btn_Consultar;
         private System.Windows.Forms.Button btn_Apagar;
         private System.Windows.Forms.Button btn_Alterar;
         private System.Windows.Forms.MenuStrip menuStrip1;

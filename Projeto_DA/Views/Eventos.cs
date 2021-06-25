@@ -37,23 +37,32 @@ namespace Projeto_DA.Views
             int IdadeInferior = int.Parse(tb_Idade_Inferior.Text);
             string TipoEvento = tb_tipo_evento.Text;
             
+            // Instanciar Evento
             Evento evento = new Evento(Descricao, Local, DataHora, LimiteParticipacoes, IdadeSuperior, IdadeInferior, TipoEvento);
 
+            // Função que vai verificar a idade inferior e superior
             if (IdadeInferior < 18 && IdadeSuperior >= 18)
             {
                 MessageBox.Show("A sua Idade é inferior a 18 e a sua idade é superior a 18 anos", "Caixa de dialogo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                // Adiciona um Evento
                 booKidsContainer4.Eventoes.Add(evento);
+
+                // Atualiza a base de dados
                 lb_registar_eventos.DataSource = null;
                 lb_registar_eventos.DataSource = booKidsContainer4.Eventoes.ToList<Evento>();
+               
+                // Salva as alterações
                 booKidsContainer4.SaveChanges();
             }
             else
-            {
+            {    // Mensagem de aviso caso a idade esteja incorreta
                 MessageBox.Show("A sua idade tem que ser inferior a 18" + "\n" + "A sua idade superior tem que ser superior a 18 ", "Messangem de Aviso",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        // --------------------- Função LerDados ---------------------------
         private void LerDados()
         {
             lb_registar_eventos.DataSource = booKidsContainer4.Eventoes.ToList<Evento>();
@@ -62,6 +71,8 @@ namespace Projeto_DA.Views
         private void Eventos_Load(object sender, EventArgs e)
         {
             booKidsContainer4 = new BooKidsContainer4();
+           
+            // Chama a função LerDados
             LerDados();
         }
 
@@ -71,12 +82,17 @@ namespace Projeto_DA.Views
             if (lb_registar_eventos.SelectedIndex == 1)
                 return;
             Evento eventoSelecionado = (Evento)lb_registar_eventos.SelectedItem;
+            
+            // Remove um Evento
             booKidsContainer4.Eventoes.Remove(eventoSelecionado);
+
+            // Salva as alterações
             booKidsContainer4.SaveChanges();
+
+            // Atualiza a base de dados
             lb_registar_eventos.DataSource = null;
             lb_registar_eventos.DataSource = booKidsContainer4.Eventoes.ToList<Evento>();
         }
-
 
        
         // --------------------- Alterar dados -------------------------------
@@ -119,6 +135,7 @@ namespace Projeto_DA.Views
             MessageBox.Show("O ficheiro foi guardado com o nome: " + saveFileDialogTexto.FileName);
         }
 
+        // ---------------- Criar a ficha de incrições -----------------------
         private void formatoPDFToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lb_registar_eventos.SelectedIndex == -1)

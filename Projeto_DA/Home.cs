@@ -28,14 +28,7 @@ namespace Projeto_DA
             this.Height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            panelMenu.Hide();
-            btn_hideMenu.Hide();
-            btn_showMenu.Show();
-            pb_logo.Hide();
-        }
-
+        // -------------------- Botão para mostrar o Menú -----------------
         private void btn_showMenu_Click(object sender, EventArgs e)
         {
             panelMenu.Show();
@@ -92,6 +85,7 @@ namespace Projeto_DA
 
         private void btn_eventos_Click(object sender, EventArgs e)
         {
+            // Abre o form dentro do panel que está no Menú
             Eventos janela = new Eventos();
             janela.TopLevel = false;
             janela.Visible = true;
@@ -108,6 +102,7 @@ namespace Projeto_DA
 
         private void btn_compras_Click(object sender, EventArgs e)
         {
+            // Abre o form dentro do panel que está no Menú
             Compras janela = new Compras();
             janela.TopLevel = false;
             janela.Visible = true;
@@ -125,6 +120,7 @@ namespace Projeto_DA
 
         private void btn_escolas_Click(object sender, EventArgs e)
         {
+            // Abre o form dentro do panel que está no Menú
             Escolas janela = new Escolas();
             janela.TopLevel = false;
             janela.Visible = true;
@@ -142,6 +138,7 @@ namespace Projeto_DA
 
         private void btn_animadores_Click(object sender, EventArgs e)
         {
+            // Abre o form dentro do panel que está no Menú
             Animacao janela = new Animacao();
             janela.TopLevel = false;
             janela.Visible = true;
@@ -155,8 +152,6 @@ namespace Projeto_DA
             btn_compras.BackColor = Color.Black;
             btn_escolas.BackColor = Color.Black;
             btn_eventos.BackColor = Color.Black;
-        }
-
-        
+        }       
     }
 }

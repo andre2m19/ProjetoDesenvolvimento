@@ -8,6 +8,7 @@ namespace Projeto_DA.Base_de_dados
 {
     public partial class Animador
     {
+        // ------------------ Construtor do Animador ------------------------------
         public Animador(int idPessoa, string nome, string morada, string localidade, string codpostal, string telefone, string telemovel, string mail, string especialidade)
         {
             IdPessoa = idPessoa;
@@ -21,6 +22,7 @@ namespace Projeto_DA.Base_de_dados
             Especialidade = especialidade;
         }
 
+        // ----------- Função que mostra os dados na listbox -------------------
         public override string ToString()
         {
             return "Sr/Sra " + Nome + " reside em " + Morada + ". Contacte em " + Mail;

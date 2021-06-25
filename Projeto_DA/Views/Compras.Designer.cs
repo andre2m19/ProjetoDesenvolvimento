@@ -212,6 +212,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
+            this.btn_Registar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Registar.Location = new System.Drawing.Point(893, 465);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -224,6 +225,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
+            this.btn_Apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Apagar.Location = new System.Drawing.Point(893, 732);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -236,6 +238,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
+            this.btn_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Alterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Alterar.Location = new System.Drawing.Point(893, 599);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

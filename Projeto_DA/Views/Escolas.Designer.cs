@@ -118,6 +118,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Alterar
             // 
+            this.btn_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Alterar.Location = new System.Drawing.Point(893, 599);
             this.btn_Alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Alterar.Name = "btn_Alterar";
@@ -129,6 +130,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Apagar
             // 
+            this.btn_Apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Apagar.Location = new System.Drawing.Point(893, 726);
             this.btn_Apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Apagar.Name = "btn_Apagar";
@@ -140,6 +142,7 @@ namespace Projeto_DA.Views
             // 
             // btn_Registar
             // 
+            this.btn_Registar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registar.Location = new System.Drawing.Point(893, 485);
             this.btn_Registar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Registar.Name = "btn_Registar";

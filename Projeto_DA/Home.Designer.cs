@@ -31,6 +31,7 @@ namespace Projeto_DA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_animadores = new System.Windows.Forms.Button();
             this.btn_escolas = new System.Windows.Forms.Button();
@@ -43,10 +44,9 @@ namespace Projeto_DA
             this.btn_hideMenu = new System.Windows.Forms.Button();
             this.btn_showMenu = new System.Windows.Forms.Button();
             this.panel_forms = new System.Windows.Forms.Panel();
-            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -65,6 +65,17 @@ namespace Projeto_DA
             this.panelMenu.Size = new System.Drawing.Size(406, 1376);
             this.panelMenu.TabIndex = 12;
             this.panelMenu.Visible = false;
+            // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
+            this.pb_logo.Location = new System.Drawing.Point(78, 183);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(264, 199);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_logo.TabIndex = 14;
+            this.pb_logo.TabStop = false;
+            this.pb_logo.Visible = false;
             // 
             // panel3
             // 
@@ -233,7 +244,6 @@ namespace Projeto_DA
             this.btn_hideMenu.TabIndex = 22;
             this.btn_hideMenu.UseVisualStyleBackColor = false;
             this.btn_hideMenu.Visible = false;
-            this.btn_hideMenu.Click += new System.EventHandler(this.button9_Click);
             // 
             // btn_showMenu
             // 
@@ -258,17 +268,6 @@ namespace Projeto_DA
             this.panel_forms.Size = new System.Drawing.Size(1521, 971);
             this.panel_forms.TabIndex = 14;
             // 
-            // pb_logo
-            // 
-            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
-            this.pb_logo.Location = new System.Drawing.Point(78, 183);
-            this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(264, 199);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_logo.TabIndex = 14;
-            this.pb_logo.TabStop = false;
-            this.pb_logo.Visible = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -285,8 +284,8 @@ namespace Projeto_DA
             this.Text = " BooKids - Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

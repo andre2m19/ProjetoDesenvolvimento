@@ -10,6 +10,7 @@ namespace Projeto_DA.Base_de_dados
 {
     public partial class Evento
     {
+        // ------------------ Construtor do Evento ------------------------------
         public Evento(string descricao, string local, DateTime dataHora, string limiteParticipacoes, int idadeSuperior, int idadeInferior, string tipoEvento)
         {
             Descricao = descricao;
@@ -22,6 +23,8 @@ namespace Projeto_DA.Base_de_dados
           
 
         }
+
+        // ----------- Função que mostra os dados na listbox -------------------
         public override string ToString()
         {
             return ("Descicao--->" + Descricao + "Local--->" + Local + "Data Hora--->" + DataHora + "Idade Superior--->" + IdadeSuperior + "Idade Inferior--->" + IdadeInferior + "Limite Participacoes--->" + LimitePartcipacoes + "Tipo Evento--->" + TipoEvento);
